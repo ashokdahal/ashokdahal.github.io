@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="RiskChanges, SDSS, Risk, Natural Hazard, Earthquake Risk, Natural Hazard Risk, Landslide Risk, cees van westen, ashok Dahal">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>RiskChanges</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="RiskChanges.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 3.25.0, nicepage.com">
+    <meta property="og:title" content="http://riskchanges.org/">
+    <meta property="og:description" content="A Spatial Decision Support System for Multi-Hazard Risk Reduction.">
+    <meta property="og:image" content="http://riskchanges.org/images/logo2.png">
+    <meta property="og:url" content="http://riskchanges.org/">
+    <link rel="icon" href="images/favicon.jpg">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <link id="u-theme-google-font" rel="stylesheet" href="fonts.css">
+    <link id="u-page-google-font" rel="stylesheet" href="RiskChanges-fonts.css">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "RiskChanges",
+		"logo": "images/logo2.png"
+}</script>
+    <meta name="theme-color" content="#8ebec9">
+    <meta property="og:type" content="website">
+
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+  
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="https://unpkg.com/esri-leaflet@3.0.0/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@3.0.0/dist/esri-leaflet-vector.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+      #map {
+        width: 100%;
+        height:30%;
+        margin-top: 1px;
+        background-color: #FAFAFA;
+      }
+      #form{height:15%;}
+      .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }
+    </style>
+  <style>
+    .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+    .legend { text-align: left; line-height: 30px; color: #555; } .legend i { width: 30px; height: 18px; float: left; margin-right: 8px; opacity: 0.7; }</style>
+    
+  </head>
+  <body data-home-page="RiskChanges.html" data-home-page-title="RiskChanges" class="u-body"></body>
+    
+    <header class="u-clearfix u-custom-color-1 u-header u-sticky u-sticky-2ad6 u-header" id="sec-5852"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="http://riskchanges.org/" class="u-image u-logo u-image-1" data-image-width="5194" data-image-height="1718" title="RiskChanges">
+          <img src="images/logo2.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="RiskChanges.html#carousel_117c" data-page-id="2335719020" style="padding: 10px 20px;">RiskChanges</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="RiskChanges.html#sec-2c8a" data-page-id="2335719020" style="padding: 10px 20px;">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="RiskChanges.html#carousel_bb29" data-page-id="2335719020" style="padding: 10px 20px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#carousel_bb29" style="padding: 10px 20px;">Documentation</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#carousel_bb29" style="padding: 10px 20px;">Discussion</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="http://riskchanges.org/app/#/login" target="_blank" style="padding: 10px 20px;">Login</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#carousel_117c" data-page-id="2335719020" style="padding: 10px 20px;">RiskChanges</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#sec-2c8a" data-page-id="2335719020" style="padding: 10px 20px;">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#carousel_bb29" data-page-id="2335719020" style="padding: 10px 20px;">Contact</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#carousel_bb29" style="padding: 10px 20px;">Documentation</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="RiskChanges.html#carousel_bb29" style="padding: 10px 20px;">Discussion</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="http://riskchanges.org/app/#/login" target="_blank" style="padding: 10px 20px;">Login</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section id="carousel_e979" class="u-carousel u-carousel-duration-0 u-slide u-block-2e3b-1" data-u-ride="carousel" data-interval="3000" data-pause="false">
+      <ol class="u-absolute-hcenter u-carousel-indicators u-hidden u-block-2e3b-2">
+        <li data-u-target="#carousel_e979" data-u-slide-to="0" class="u-active u-grey-30"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="1"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="2"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="3"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="4"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="5"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="6"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="7"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="8"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="9"></li>
+        <li data-u-target="#carousel_e979" class="u-grey-30" data-u-slide-to="10"></li>
+      </ol>
+      <div class="u-carousel-inner" role="listbox">
+        <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-section-1-1" src="" data-image-width="4400" data-image-height="2475">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​using simple hazard susceptibility maps&nbsp;&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-2" src="" data-image-width="4000" data-image-height="2250">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;Visualize and compare your results
+in different ways&nbsp;<span style="font-size: 1rem;">
+                    <span style="font-size: 1.5rem;"></span>
+                  </span>&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-3" src="" data-image-width="1280" data-image-height="720">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​&nbsp;
+with a shared vulnerability curve
+database&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-4" src="" data-image-width="1280" data-image-height="720">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​
+from multiple natural and man-made
+hazards&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-5" src="" data-image-width="1600" data-image-height="900">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+using hazard intensity-frequency
+maps&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-6" src="" data-image-width="1280" data-image-height="720">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​
+Linking to data on map-servers&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-7" src="" data-image-width="1333" data-image-height="750">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​uploading your own GIS data&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-8" src="" data-image-width="4400" data-image-height="2475">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​
+​
+For the current situation and
+future projections&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-9" src="" data-image-width="973" data-image-height="548">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​
+​​
+for future years under different
+scenarios&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-10" src="" data-image-width="1280" data-image-height="744">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​
+​​
+​
+for various risk reduction
+alternatives&nbsp;&nbsp;&nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-center u-carousel-item u-clearfix u-image u-section-1-11" src="" data-image-width="4000" data-image-height="2308">
+          <div class="u-align-left u-clearfix u-sheet u-sheet-1">
+            <div class="u-list u-list-1">
+              <div class="u-repeater u-repeater-1">
+                <div class="u-align-left u-container-style u-custom-item u-list-item u-repeater-item u-shape-rectangle" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+                  <div class="u-container-layout u-similar-container u-container-layout-1">
+                    <img class="u-image u-image-default u-image-1" src="images/3blue_back.png" alt="" data-image-width="4961" data-image-height="1625">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-expanded-width u-group u-opacity u-opacity-65 u-palette-4-dark-3 u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <h4 class="u-text u-text-1"> An open-source Spatial Decision
+Support tool for the analysis of Dynamic Multi-Hazard risk:<br>&nbsp; &nbsp;​​
+​
+​​
+​
+​
+Using cloud-based database and
+calculation&nbsp;&nbsp;&nbsp; &nbsp;<br>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-hidden u-text-grey-30 u-block-2e3b-3" href="#carousel_e979" role="button" data-u-slide="prev">
+        <span aria-hidden="true">
+          <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+                    c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+        </span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-hidden u-text-grey-30 u-block-2e3b-4" href="#carousel_e979" role="button" data-u-slide="next">
+        <span aria-hidden="true">
+          <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+                    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+        </span>
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-1-dark-1 u-section-2" id="sec-2c8a">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1">Many Tasks, One System</h2>
+        <p class="u-text u-text-default u-text-2"> Major Features of the RiskChanges SDSS are:</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e611"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-e611"><g><g><g><path d="m267 11c-135.31 0-245 109.69-245 245 0 46.08 12.731 89.183 34.854 126l1.146 1h418l1.146-1c22.123-36.817 34.854-79.92 34.854-126 0-135.31-109.69-245-245-245z" fill="#596c76"></path>
+</g><path d="m111.148 304.135 1.639-1.695h-3.442c-13.472 0-24.432-10.96-24.432-24.432 0-6.767 2.71-13.063 7.631-17.728l1.821-1.726h-10.84c-8.629 0-16.222-4.501-20.57-11.275l-27.793 48.879c-.758 1.333.205 2.989 1.739 2.989h44.023c1.528 0 2.491 1.644 1.745 2.977l-44.142 78.879c-1.142 2.041 1.547 4.047 3.178 2.372l62.667-64.355c.473-5.585 2.835-10.808 6.776-14.885z" fill="#fee903"></path><g fill="#f4d902"><path d="m52.162 296.159 22.363-39.329c-4.782-1.902-8.823-5.27-11.57-9.549l-27.793 48.879c-.758 1.333.205 2.989 1.739 2.989h17c-1.534-.001-2.497-1.656-1.739-2.99z"></path><path d="m97.121 299.148h-16.197c1.528 0 2.491 1.644 1.745 2.977l-44.142 78.879c-1.142 2.041 1.547 4.047 3.178 2.372l29.377-30.169 28.587-51.083c.299-.535.314-1.116.136-1.625-.926-.394-1.82-.849-2.684-1.351z"></path>
+</g><g><path d="m23.44 78.148c.658-.053 1.32-.088 1.991-.088h264.137c.671 0 1.334.035 1.991.088 5.589-4.665 9.146-11.681 9.146-19.53 0-14.045-11.386-25.432-25.431-25.432h-235.549c-14.045 0-25.432 11.386-25.432 25.432.001 7.849 3.559 14.865 9.147 19.53z" fill="#a8d3d8"></path><g fill="#8ebac5"><path d="m48 58.618c0-14.045 11.386-25.432 25.432-25.432h-33.707c-14.045 0-25.432 11.386-25.432 25.432 0 7.849 3.558 14.865 9.146 19.53.658-.053 1.32-.088 1.991-.088h31.615c-5.528-4.665-9.045-11.641-9.045-19.442z"></path><path d="m289.568 78.06c.671 0 1.334.035 1.991.088.034-.028.066-.059.1-.088z"></path>
+</g><g><path d="m165.28 383 18.259-37.459h-52.078l18.259 37.459z" fill="#8ebac5"></path><path d="m148 345.541h-16.539l18.259 37.459h15.56l.489-1.005z" fill="#7ca1b1"></path><path d="m203.553 302.44h-92.105c-5.022 4.646-8.169 11.289-8.169 18.669 0 14.045 11.386 25.432 25.432 25.432h57.58c14.045 0 25.432-11.386 25.432-25.432-.002-7.38-3.149-14.023-8.17-18.669z" fill="#7ca1b1"></path><path d="m137 321.109c0-7.38 3.147-14.023 8.169-18.669h-33.721c-5.022 4.646-8.169 11.289-8.169 18.669 0 14.045 11.386 25.432 25.432 25.432h33.721c-14.046 0-25.432-11.386-25.432-25.432z" fill="#678d98"></path><path d="m222.029 258.555h-129.058c-5.536 4.665-9.057 11.646-9.057 19.453 0 14.045 11.386 25.432 25.432 25.432h96.309c14.045 0 25.431-11.386 25.431-25.432 0-7.806-3.521-14.788-9.057-19.453z" fill="#678d98"></path><path d="m117.828 278.008c0-7.807 3.521-14.788 9.057-19.453h-33.914c-5.536 4.665-9.057 11.646-9.057 19.453 0 14.045 11.386 25.432 25.432 25.432h33.914c-14.046 0-25.432-11.386-25.432-25.432z" fill="#537983"></path><path d="m247.861 214.682h-180.722c-5.529 4.665-9.044 11.641-9.044 19.442 0 14.045 11.386 25.432 25.431 25.432h147.948c14.045 0 25.432-11.386 25.432-25.432 0-7.801-3.516-14.777-9.045-19.442z" fill="#7ca1b1"></path><path d="m92 234.124c0-7.801 3.515-14.777 9.044-19.442h-33.905c-5.529 4.665-9.044 11.641-9.044 19.442 0 14.045 11.386 25.432 25.431 25.432h33.906c-14.046-.001-25.432-11.387-25.432-25.432z" fill="#678d98"></path>
+</g><path d="m267.666 171.188h-220.332c-5.275 4.66-8.605 11.47-8.605 19.061 0 14.045 11.386 25.432 25.431 25.432h186.678c14.045 0 25.432-11.386 25.432-25.432.001-7.591-3.33-14.401-8.604-19.061z" fill="#678d98"></path><path d="m72.459 190.25c0-7.592 3.33-14.402 8.605-19.061h-33.73c-5.275 4.66-8.605 11.47-8.605 19.061 0 14.045 11.386 25.432 25.431 25.432h33.729c-14.044-.001-25.43-11.387-25.43-25.432z" fill="#537983"></path><path d="m286.113 126.923h-257.226c-5.803 4.661-9.522 11.812-9.522 19.834 0 14.045 11.386 25.432 25.432 25.432h225.407c14.045 0 25.432-11.386 25.432-25.432-.001-8.023-3.719-15.173-9.523-19.834z" fill="#7ca1b1"></path><path d="m53 146.757c0-8.023 3.719-15.173 9.522-19.834h-33.635c-5.803 4.661-9.522 11.812-9.522 19.834 0 14.045 11.386 25.432 25.432 25.432h33.635c-14.046 0-25.432-11.387-25.432-25.432z" fill="#678d98"></path><path d="m289.568 127.923h-264.136c-14.046 0-25.432-11.386-25.432-25.432 0-14.045 11.386-25.431 25.432-25.431h264.137c14.045 0 25.432 11.386 25.432 25.432-.001 14.045-11.387 25.431-25.433 25.431z" fill="#8ebac5"></path><path d="m33 102.491c0-14.045 11.386-25.431 25.432-25.431h-33c-14.046 0-25.432 11.386-25.432 25.431 0 14.045 11.386 25.432 25.432 25.432h33c-14.046 0-25.432-11.386-25.432-25.432z" fill="#7ca1b1"></path>
+</g><g><path d="m267 501c89.229 0 167.308-47.707 210.146-119h-420.292c42.838 71.293 120.917 119 210.146 119z" fill="#0bb494"></path>
+</g><path d="m432.5 426h-231c-4.142 0-7.5-3.358-7.5-7.5 0-4.142 3.358-7.5 7.5-7.5h231c4.142 0 7.5 3.358 7.5 7.5 0 4.142-3.358 7.5-7.5 7.5z" fill="#00a887"></path>
+</g><g><g><path d="m487.5 291.151c0-13.738-10.583-24.997-24.04-26.087 2.63-4.082 4.161-8.938 4.161-14.155 0-14.46-11.722-26.182-26.182-26.182-3.846 0-7.495.836-10.784 2.326-4.391-8.302-13.11-13.962-23.155-13.962s-18.764 5.66-23.155 13.962c-3.29-1.49-6.938-2.326-10.784-2.326-14.46 0-26.182 11.722-26.182 26.182 0 5.217 1.532 10.073 4.162 14.155-13.457 1.091-24.04 12.349-24.04 26.087 0 5.091 1.47 9.83 3.985 13.849h27.632c2.381 0 4.708.969 6.387 2.659l41.435 41.731c.436.439.273.944.213 1.089s-.305.616-.923.616h-4.949v8.16c1.994.486 4.077.745 6.22.745 8.645 0 16.309-4.192 21.077-10.653 3.8 2.148 8.186 3.38 12.862 3.38 14.46 0 26.182-11.722 26.182-26.182 0-3.391-.652-6.628-1.825-9.601 12.324-2.125 21.703-12.86 21.703-25.793z" fill="#0bb494"></path><g><path d="m407.5 213.091c-10.045 0-18.764 5.66-23.155 13.962-3.925-1.777-8.361-2.624-13.034-2.231-12.49 1.052-22.634 11.073-23.812 23.552-.583 6.175.99 11.953 4.042 16.69-13.457 1.091-24.04 12.349-24.04 26.087 0 5.091 1.47 9.83 3.985 13.849h13.822c-.186-1.258-.306-2.538-.306-3.849 0-11.665 7.63-21.543 18.172-24.926 2.722-.873 4.215-3.776 3.246-6.465-1.263-3.508-1.799-7.363-1.419-11.387 1.178-12.479 11.322-22.5 23.812-23.552 4.673-.394 9.109.453 13.034 2.231 4.391-8.302 13.11-13.962 23.155-13.962 1.092 0 2.165.079 3.222.209-4.789-6.202-12.283-10.208-20.724-10.208z" fill="#00a887"></path>
+</g><path d="m436.297 278c-3.249-3.249-8.518-3.249-11.767 0l-8.625 8.625v-17.845c0-4.595-3.725-8.321-8.321-8.321-4.595 0-8.321 3.725-8.321 8.321v32.686l-6.324-6.466c-3.249-3.249-8.518-3.249-11.767 0s-3.249 8.657 0 11.907l18.093 18.093v16.661l7.674 7.729c.436.439.273.944.213 1.089s-.305.616-.923.616h-4.949v50.905h14.626v-91.841l20.392-20.392c3.249-3.249 3.249-8.518-.001-11.767z" fill="#bb5d4c"></path><path d="m399.265 325v16.661l7.674 7.729c.436.439.273.944.213 1.089s-.305.616-.923.616h-4.949v50.905h6.25v-133.22c0-3.09 1.688-5.78 4.188-7.215-1.219-.7-2.627-1.106-4.133-1.106-4.595 0-8.321 3.725-8.321 8.321v32.686l-6.325-6.466c-3.249-3.249-8.518-3.249-11.767 0s-3.249 8.657 0 11.907z" fill="#a44f3e"></path><path d="m419 401h-17.72v16h23.72c2.209 0 4-1.791 4-4v-2c0-5.523-4.477-10-10-10z" fill="#f99675"></path>
+</g><g><path d="m310.855 351.094v65.906h91.425v-64.906l-1.145-1z" fill="#fff3de"></path><path d="m359.117 304h-92.74c-1.231 0-2.419.454-3.336 1.276l-48.371 43.329c-1.367 1.225-.501 3.49 1.334 3.49h190.225c1.778 0 2.672-2.147 1.419-3.409l-41.435-41.731c-1.877-1.892-4.432-2.955-7.096-2.955z" fill="#fea613"></path><path d="m269.076 314.724c-1.13-.988-2.817-.988-3.947 0l-42.779 37.37v64.906h28.622l1-1v-50c0-.551.449-1 1-1h28.262c.551 0 1 .449 1 1v50.02l1 .98h28.622v-64.906z" fill="#fff"></path><path d="m236.747 354.858 39.136-34.187-6.807-5.946c-1.13-.988-2.817-.988-3.947 0l-42.779 37.37v64.905h14.398v-62.142z" fill="#fff3de"></path><path d="m283.234 417v-51c0-1.104-.895-2-2-2h-28.263c-1.105 0-2 .896-2 2v51z" fill="#f68157"></path><path d="m265 364h-12.029c-1.105 0-2 .896-2 2v51h12.029v-51c0-1.104.895-2 2-2z" fill="#f26b38"></path>
+</g><g><g><path d="m332.28 366v36.094c0 1.105.895 2 2 2h21c1.105 0 2-.895 2-2v-36.094c0-1.105-.895-2-2-2h-21c-1.105 0-2 .895-2 2z" fill="#c8effe"></path><path d="m341 402.094v-36.094c0-1.104.895-2 2-2h-8.72c-1.105 0-2 .896-2 2v36.094c0 1.104.895 2 2 2h8.72c-1.105 0-2-.895-2-2z" fill="#99e6fc"></path><path d="m365.28 366v36.094c0 1.105.895 2 2 2h21c1.105 0 2-.895 2-2v-36.094c0-1.105-.895-2-2-2h-21c-1.105 0-2 .895-2 2z" fill="#c8effe"></path><path d="m374 402.094v-36.094c0-1.104.895-2 2-2h-8.72c-1.105 0-2 .896-2 2v36.094c0 1.104.895 2 2 2h8.72c-1.105 0-2-.895-2-2z" fill="#99e6fc"></path>
+</g>
+</g>
+</g><path d="m136.939 110.197 7.864-7.864c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0l-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197z" fill="#fff"></path><path d="m86.637 160.5 7.864-7.864c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0l-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.838-.733 5.303-2.197z" fill="#fff"></path><g fill="#fff"><path d="m347.463 189.144c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0l-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197z"></path><path d="m298.44 216.954-4.243 4.243c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l4.243-4.243c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path><path d="m207.697 272.697-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l7.864-7.864c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path><path d="m166.197 314.197-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l7.864-7.864c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path><path d="m458.667 180.333c-2.929-2.929-7.678-2.929-10.606 0l-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l7.864-7.864c2.929-2.929 2.929-7.678 0-10.606z"></path><path d="m398.697 229.697-7.864 7.864c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l7.864-7.864c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path>
+</g><g fill="#00a887"><path d="m290.643 474h-27.143c-4.142 0-7.5-3.358-7.5-7.5 0-4.142 3.358-7.5 7.5-7.5h27.143c4.142 0 7.5 3.358 7.5 7.5 0 4.142-3.358 7.5-7.5 7.5z"></path><path d="m364 449.5c0-4.142-3.358-7.5-7.5-7.5h-15c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h15c4.142 0 7.5-3.358 7.5-7.5z"></path><path d="m144 405.5c0-4.142-3.358-7.5-7.5-7.5h-15c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h15c4.142 0 7.5-3.358 7.5-7.5z"></path><path d="m196 447.5c0-4.142-3.358-7.5-7.5-7.5h-15c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5h15c4.142 0 7.5-3.358 7.5-7.5z"></path>
+</g><g fill="#fff"><path d="m138.197 187.197-4.243 4.243c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l4.243-4.243c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path><path d="m287.799 91.13-8.169 8.169c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l8.169-8.169c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path><path d="m169.197 158.197-8.169 8.169c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l8.169-8.169c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path><path d="m323.197 55.732-8.169 8.169c-2.929 2.929-2.929 7.678 0 10.606 1.464 1.464 3.384 2.197 5.303 2.197s3.839-.732 5.303-2.197l8.169-8.169c2.929-2.929 2.929-7.678 0-10.606-2.929-2.929-7.678-2.929-10.606 0z"></path>
+</g><path d="m446.985 71.108h-40.946c-1.486 0-2.453-1.562-1.79-2.892l27.021-54.23c.663-1.33-.305-2.892-1.79-2.892h-28.951c-.746 0-1.43.415-1.774 1.077l-41.62 80.021c-.692 1.331.274 2.923 1.774 2.923h34.288c1.528 0 2.491 1.644 1.745 2.977l-33.806 60.41c-1.142 2.041 1.547 4.047 3.178 2.372l84.105-86.37c1.233-1.268.335-3.396-1.434-3.396z" fill="#fee903"></path><g fill="#f4d902"><path d="m373.228 92.192 41.62-80.021c.344-.662 1.028-1.077 1.774-1.077h-16.094c-.746 0-1.43.415-1.774 1.077l-41.62 80.021c-.693 1.331.274 2.923 1.774 2.923h16.094c-1.5 0-2.466-1.591-1.774-2.923z"></path><path d="m411.035 98.092c.746-1.333-.218-2.977-1.745-2.977h-16.094c1.528 0 2.491 1.644 1.745 2.977l-33.806 60.41c-1.142 2.041 1.547 4.047 3.178 2.372l27.247-27.981z"></path>
+</g>
+</g></svg>
+            
+            
+          </span>
+                <h3 class="u-align-center u-text u-text-3"> Multi-Hazard</h3>
+                <p class="u-align-center u-text u-text-4"> Analyze the risk for multiple natural and man made hazards and their interactions</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 464.00617 464" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-feb9"></use></svg><svg class="u-svg-content" viewBox="0 0 464.00617 464" id="svg-feb9"><path d="m304 136.003906h-144l-80-72h136zm0 0" fill="#e94f4f"></path><path d="m160 136.003906h144v152h-144zm0 0" fill="#5ac6d4"></path><path d="m160 288.003906h-160v-152l80-72 80 72zm0 0" fill="#60d1e0"></path><path d="m56 224.003906h48v64h-48zm0 0" fill="#348fd9"></path><path d="m64 152.003906h32v40h-32zm0 0" fill="#ffb531"></path><path d="m160 136.003906h144v16h-144zm0 0" fill="#3fb7c7"></path><path d="m64 152.003906h32v16h-32zm0 0" fill="#ffa912"></path><path d="m56 224.003906h48v16h-48zm0 0" fill="#3086cd"></path><path d="m240 352.003906h-176c-35.347656 0-64-28.65625-64-64h464c0 35.34375-28.652344 64-64 64h-40" fill="#e0e0de"></path><path d="m368 288.003906c0 35.34375-28.652344 64-64 64h96c35.347656 0 64-28.65625 64-64zm0 0" fill="#d6d6d4"></path><path d="m247.375 350.890625-2.039062 1.113281h-61.335938c-13.253906 0-24 10.746094-24 24s10.746094 24 24 24h-16l-90.96875-41.664062c-8.09375-3.707032-17.515625-3.042969-25.007812 1.765625-7.492188 4.808593-12.023438 13.097656-12.023438 22v1.738281c.007812 9.894531 5.601562 18.9375 14.457031 23.359375l93.269531 46.640625c13.332032 6.671875 28.03125 10.148438 42.9375 10.160156h169.335938v-112c-34.804688-19.890625-77.433594-20.3125-112.625-1.113281zm0 0" fill="#fec9a3"></path><path d="m272 408.003906h-88c-4.417969 0-8-3.582031-8-8 0-4.417968 3.582031-8 8-8h88c4.417969 0 8 3.582032 8 8 0 4.417969-3.582031 8-8 8zm0 0" fill="#feb784"></path><path d="m360 352.003906h104v112h-104zm0 0" fill="#348fd9"></path><path d="m416 424.003906c0 8.835938-7.164062 16-16 16s-16-7.164062-16-16c0-8.835937 7.164062-16 16-16s16 7.164063 16 16zm0 0" fill="#2a71ad"></path><path d="m440 240.003906v-112c0-44.183594-35.816406-80-80-80l24-47.99999975h-96l24 47.99999975c-44.183594 0-80 35.816406-80 80v112l-14.71875 9.816406c-5.804688 3.859376-9.289062 10.367188-9.28125 17.335938 0 11.511719 9.332031 20.847656 20.847656 20.847656h214.304688c11.515625 0 20.847656-9.335937 20.847656-20.847656 0-6.96875-3.480469-13.476562-9.28125-17.34375zm0 0" fill="#ffb531"></path><path d="m454.71875 249.820312-14.71875-9.816406v-112c.015625-18.953125-6.726562-37.285156-19.015625-51.710937-29.152344 93.515625-96.410156 170.390625-185.222656 211.710937h207.390625c9.1875.003906 17.292968-6.003906 19.957031-14.796875s-.742187-18.292969-8.390625-23.386719zm0 0" fill="#ffa912"></path><path d="m348 160.003906h-24c-6.628906 0-12-5.375-12-12 0-6.628906 5.371094-12 12-12h44v-16h-24v-16h-16v16h-4c-15.464844 0-28 12.535156-28 28s12.535156 28 28 28h24c6.628906 0 12 5.371094 12 12 0 6.625-5.371094 12-12 12h-44v16h24v16h16v-16h4c15.464844 0 28-12.535156 28-28s-12.535156-28-28-28zm0 0" fill="#f98500"></path></svg>
+            
+            
+          </span>
+                <h3 class="u-align-center u-text u-text-5"> Multiple Assets</h3>
+                <p class="u-align-center u-text u-text-6"> Analyze the risk for multiple asset types with varying spatial characteristics</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ce07"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-ce07"><path d="m467.667969 0c-31.039063 0-61.371094 8.675781-87.714844 25.089844-26.34375 16.410156-47.5 39.8125-61.179687 67.675781l-138.824219 282.726563c-15.703125 31.988281-39.996094 58.859374-70.242188 77.703124-30.246093 18.84375-65.070312 28.804688-100.707031 28.804688v15.667969h78.144531c13.328125-5.058594 26.207031-11.394531 38.425781-19.011719 35.015626-21.8125 63.128907-52.914062 81.3125-89.941406l138.820313-282.726563c11.207031-22.824219 28.535156-41.992187 50.113281-55.4375 21.582032-13.445312 46.425782-20.550781 71.851563-20.550781h44.332031v-30zm0 0" fill="#ff6200"></path><path d="m347.667969 34c-25.917969 0-47 21.085938-47 47s21.082031 47 47 47c25.914062 0 47-21.085938 47-47s-21.085938-47-47-47zm0 0" fill="#292929"></path><path d="m286 490.667969h-30v-241h-241v-30h271zm0 0" fill="#d8d8d8"></path><path d="m512 482h-256l-10.664062 19.332031 10.664062 10.667969h256zm0 0" fill="#6e6e6e"></path><path d="m30 482v-482h-30v512h256v-30zm0 0" fill="#9c9c9c"></path><path d="m271.332031 187.667969c-5.367187 0-10.523437.917969-15.332031 2.582031l-10.667969 44.417969 10.667969 44.417969c4.808594 1.664062 9.964844 2.582031 15.332031 2.582031 25.917969 0 47-21.085938 47-47 0-25.917969-21.082031-47-47-47zm0 0" fill="#292929"></path><path d="m224.332031 234.667969c0 20.546875 13.261719 38.042969 31.667969 44.417969v-88.835938c-18.40625 6.371094-31.667969 23.867188-31.667969 44.417969zm0 0" fill="#444"></path></svg>
+            
+            
+          </span>
+                <h3 class="u-align-center u-text u-text-7"> Vulnerability Database</h3>
+                <p class="u-align-center u-text u-text-8"> Access a database of physical vulnerability curves and share your own&nbsp;ones</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-icon u-icon-circle u-text-palette-1-base u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-11c6"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-11c6"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256" x2="256" y1="512" y2="0"><stop offset="0" stop-color="#009efd"></stop><stop offset="1" stop-color="#2af598"></stop>
+</linearGradient><g><g><path d="m160 60c0-33.084-26.916-60-60-60s-60 26.916-60 60 26.916 60 60 60 60-26.916 60-60zm-60 20c-11.028 0-20-8.972-20-20s8.972-20 20-20 20 8.972 20 20-8.972 20-20 20zm100 100c0-33.084-26.916-60-60-60h-40-40c-33.084 0-60 26.916-60 60v60h200zm-40 20h-120v-20c0-11.028 8.972-20 20-20h80c11.028 0 20 8.972 20 20zm-44 176v-31.716l45.858 45.858 28.284-28.284-94.142-94.142-94.142 94.142 28.284 28.284 45.858-45.858v31.716c0 55.14 44.86 100 100 100h60v-40h-60c-33.084 0-60-26.916-60-60zm356-44c0-33.084-26.916-60-60-60s-60 26.916-60 60 26.916 60 60 60 60-26.916 60-60zm-60 20c-11.028 0-20-8.972-20-20s8.972-20 20-20 20 8.972 20 20-8.972 20-20 20zm40 40h-40-40c-33.084 0-60 26.916-60 60v60h200v-60c0-33.084-26.916-60-60-60zm20 80h-120v-20c0-11.028 8.972-20 20-20h80c11.028 0 20 8.972 20 20zm-76-336v31.716l-45.857-45.858-28.285 28.284 94.142 94.142 94.143-94.142-28.285-28.284-45.858 45.858v-31.716c0-55.14-44.859-100-100-100h-100v40h100c33.084 0 60 26.916 60 60z" fill="url(#SVGID_1_)"></path>
+</g>
+</g></svg>
+            
+            
+          </span>
+                <h3 class="u-align-center u-text u-text-9"> Multi User</h3>
+                <p class="u-align-center u-text u-text-10"> Different users provide input data to the same project&nbsp;</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-5"><span class="u-icon u-icon-circle u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-e3ef"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-e3ef" style="enable-background:new 0 0 512 512;"><polygon style="fill:#B5EFFF;" points="328.161,486.688 184.172,486.688 242.114,235.807 266.81,235.807 "></polygon><polygon style="fill:#80DBFF;" points="328.161,486.688 256.541,486.688 256.541,235.807 266.81,235.807 "></polygon><path style="fill:#B5EFFF;" d="M78.232,284.742c-8.283,0-14.998-6.715-14.998-14.998v-51.312c0-8.283,6.715-14.998,14.998-14.998  s14.998,6.715,14.998,14.998v51.312C93.23,278.027,86.515,284.742,78.232,284.742z"></path><path style="fill:#80DBFF;" d="M433.767,237.089c-8.283,0-14.998-6.715-14.998-14.998V166.78c0-8.283,6.715-14.998,14.998-14.998  c8.283,0,14.998,6.715,14.998,14.998v55.311C448.764,230.374,442.049,237.089,433.767,237.089z"></path><path style="fill:#5A6384;" d="M349.647,471.691c0,8.289-6.709,14.998-14.998,14.998H177.423c-8.289,0-14.998-6.709-14.998-14.998  c0-8.279,6.709-14.998,14.998-14.998H334.65C342.938,456.693,349.647,463.413,349.647,471.691z"></path><path style="fill:#FFB13B;" d="M78.232,76.964C35.095,76.964,0,112.06,0,155.196s35.095,78.232,78.232,78.232  s78.232-35.096,78.232-78.232S121.37,76.964,78.232,76.964z"></path><path style="fill:#FFFFFF;" d="M52.043,180.241c0-0.18,0.059-0.507,0.179-0.984l16.641-54.578c0.477-1.49,1.566-2.64,3.266-3.444  c1.7-0.805,3.652-1.208,5.86-1.208c2.206,0,4.16,0.403,5.86,1.208c1.7,0.806,2.788,1.955,3.267,3.444l16.73,54.578  c0.119,0.478,0.179,0.805,0.179,0.984c0,1.552-0.97,2.894-2.908,4.025c-1.939,1.134-3.952,1.7-6.039,1.7  c-2.566,0-4.086-0.864-4.562-2.595l-3.042-11.184h-18.88l-3.042,11.185c-0.478,1.73-2,2.595-4.563,2.595  c-2.089,0-4.101-0.566-6.039-1.7C53.012,183.135,52.043,181.793,52.043,180.241z M71.458,161.452h13.063l-6.531-23.978  L71.458,161.452z"></path><path style="fill:#F45607;" d="M433.767,25.312c-43.138,0-78.232,35.096-78.232,78.232c0,43.139,35.096,78.233,78.232,78.233  c43.139,0,78.233-35.096,78.233-78.233C512,60.407,476.904,25.312,433.767,25.312z"></path><path style="fill:#FFFFFF;" d="M412.88,131.951V75.047c0-1.371,0.596-2.43,1.79-3.177c1.192-0.745,2.624-1.118,4.294-1.118h18.341  c11.93,0,17.894,5.31,17.894,15.927c0,7.157-2.536,11.84-7.605,14.047c3.043,1.134,5.338,2.76,6.89,4.876  c1.551,2.118,2.326,5.265,2.326,9.439v1.879c0,6.681-1.626,11.557-4.876,14.629c-3.252,3.073-7.62,4.607-13.107,4.607h-19.862  c-1.85,0-3.325-0.417-4.429-1.253C413.431,134.069,412.88,133.085,412.88,131.951z M426.748,95.358h9.395  c1.611,0,2.863-0.611,3.758-1.835c0.895-1.222,1.342-2.669,1.342-4.339c0-1.669-0.447-3.132-1.342-4.384  c-0.896-1.253-2.147-1.879-3.758-1.879h-9.395V95.358z M426.748,123.989h8.947c4.771,0,7.158-2.743,7.158-8.231v-1.432  c0-5.487-2.387-8.231-7.158-8.231h-8.947V123.989z"></path><path style="fill:#5A6384;" d="M484.737,233.677l-228.196,29.746L32.215,292.668c-0.66,0.09-1.31,0.13-1.96,0.13  c-7.419,0-13.868-5.509-14.858-13.058c-1.07-8.219,4.719-15.748,12.938-16.817l228.206-29.746l224.326-29.246  c8.209-1.07,15.738,4.719,16.807,12.938C498.745,225.079,492.956,232.608,484.737,233.677z"></path><g><path style="fill:#445175;" d="M349.647,471.691c0,8.289-6.709,14.998-14.998,14.998h-78.108v-29.995h78.108   C342.938,456.693,349.647,463.413,349.647,471.691z"></path><path style="fill:#445175;" d="M484.737,233.677l-228.196,29.746v-30.245l224.326-29.246c8.209-1.07,15.738,4.719,16.807,12.938   C498.745,225.079,492.956,232.608,484.737,233.677z"></path>
+</g></svg>
+            
+            
+          </span>
+                <h3 class="u-align-center u-text u-text-11"> Compare Risk</h3>
+                <p class="u-align-center u-text u-text-12"> Compare current risk with future scenarios and planning alternatives</p>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-6"><span class="u-icon u-icon-circle u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-fca5"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-fca5"><g><g><path d="m508.909 491.032h-505.818c-1.707 0-3.091-1.384-3.091-3.091v-379.571c0-1.707 1.384-3.091 3.091-3.091h505.819c1.707 0 3.091 1.384 3.091 3.091v379.572c-.001 1.707-1.385 3.09-3.092 3.09z" fill="#f2fbff"></path>
+</g><g><path d="m25.755 462.187v-328.063c0-1.707 1.384-3.091 3.091-3.091h454.31c1.707 0 3.091 1.384 3.091 3.091v328.063c0 1.707-1.384 3.091-3.091 3.091h-454.311c-1.707 0-3.09-1.384-3.09-3.091z" fill="#80d261"></path>
+</g><g><g><path d="m274.028 348.119h27.3v-99.928h-27.3c-2.845 0-5.151 2.306-5.151 5.151v89.626c0 2.845 2.306 5.151 5.151 5.151z" fill="#68ca44"></path>
+</g><g><path d="m268.877 217.286c0 2.845 2.306 5.151 5.151 5.151h27.3v-88.313c0-1.707 1.384-3.091 3.091-3.091h-35.541v86.253z" fill="#68ca44"></path>
+</g><g><path d="m301.328 462.187v-88.314h-27.3c-2.845 0-5.151 2.306-5.151 5.151v86.253h-1.03 36.571c-1.706.001-3.09-1.383-3.09-3.09z" fill="#68ca44"></path>
+</g>
+</g><g><path d="m59.235 462.187v-328.063c0-1.707 1.384-3.091 3.091-3.091h-33.481c-1.707 0-3.091 1.384-3.091 3.091v328.063c0 1.707 1.384 3.091 3.091 3.091h33.481c-1.707 0-3.091-1.384-3.091-3.091z" fill="#68ca44"></path>
+</g><g><path d="m268.877 217.286c0 2.845 2.306 5.151 5.151 5.151h54.085v-35.921c0-2.845-2.306-5.151-5.151-5.151h-54.085z" fill="#fff"></path>
+</g><g><path d="m274.028 222.437h27.3v-41.071h-32.451v35.921c0 2.844 2.306 5.15 5.151 5.15z" fill="#f2fbff"></path>
+</g><g><g><path d="m277.119 410.066c-2.804 0-5.555.221-8.241.64v54.572h61.241c.029-.717.055-1.434.055-2.157-.001-29.302-23.754-53.055-53.055-53.055z" fill="#01c0fa"></path>
+</g>
+</g><g><path d="m301.328 462.187v-46.271c-7.26-3.731-15.485-5.85-24.209-5.85-2.804 0-5.555.221-8.241.64v54.572h35.54c-1.707-.001-3.09-1.384-3.09-3.091z" fill="#08a9f1"></path>
+</g><g><path d="m74.688 285.278h-48.933v-49.313h45.843c1.707 0 3.091 1.384 3.091 3.091v46.222z" fill="#fff"></path>
+</g><path d="m25.755 235.965h33.481v49.313h-33.481z" fill="#f2fbff"></path><g><path d="m243.123 280.127v-81.895c-54.928.617-101.255 37.051-116.712 87.046h111.561c2.845 0 5.151-2.306 5.151-5.151z" fill="#01c0fa"></path>
+</g><g><path d="m243.123 221.55v-23.317c-54.928.617-101.255 37.051-116.712 87.046h30.243c17.326-32.717 48.903-56.712 86.469-63.729z" fill="#08a9f1"></path>
+</g><g><path d="m486.245 248.192v-25.755h-212.217c-2.845 0-5.151-2.306-5.151-5.151v-86.253h-25.755v149.094c0 2.845-2.306 5.151-5.151 5.151h-212.216v25.755h212.217c2.845 0 5.151 2.306 5.151 5.151v149.094h25.755v-86.253c0-2.845 2.306-5.151 5.151-5.151h212.217v-25.755h-212.218c-2.845 0-5.151-2.306-5.151-5.151v-89.626c0-2.845 2.306-5.151 5.151-5.151h212.217z" fill="#faea5e"></path>
+</g><g><path d="m338.414 318.38h-36.056c-1.707 0-3.091-1.384-3.091-3.091v-36.056c0-1.707 1.384-3.091 3.091-3.091h36.056c1.707 0 3.091 1.384 3.091 3.091v36.056c0 1.707-1.384 3.091-3.091 3.091z" fill="#fff"></path>
+</g><g><path d="m319.871 315.289v-36.056c0-1.707 1.384-3.091 3.091-3.091h-20.604c-1.707 0-3.091 1.384-3.091 3.091v36.056c0 1.707 1.384 3.091 3.091 3.091h20.604c-1.707 0-3.091-1.384-3.091-3.091z" fill="#f2fbff"></path>
+</g><g><path d="m458.946 195.788h-36.056c-1.707 0-3.091-1.384-3.091-3.091v-36.056c0-1.707 1.384-3.091 3.091-3.091h36.056c1.707 0 3.091 1.384 3.091 3.091v36.056c-.001 1.708-1.384 3.091-3.091 3.091z" fill="#fff"></path>
+</g><g><path d="m440.402 192.698v-36.056c0-1.707 1.384-3.091 3.091-3.091h-20.604c-1.707 0-3.091 1.384-3.091 3.091v36.056c0 1.707 1.384 3.091 3.091 3.091h20.604c-1.707-.001-3.091-1.384-3.091-3.091z" fill="#f2fbff"></path>
+</g><g><g><path d="m416.188 417.128 32.158-55.699c15.482-26.816-3.87-60.335-34.834-60.335-30.964 0-50.316 33.519-34.834 60.335l32.158 55.699c1.188 2.061 4.162 2.061 5.352 0z" fill="#fd4755"></path>
+</g><path d="m408.353 356.359c-5.406-2.077-9.25-7.304-9.25-13.441 0-5.62 3.225-10.476 7.919-12.852 3.319-11.236 11.458-20.87 22.564-25.686-4.845-2.101-10.254-3.286-16.074-3.286-30.964 0-50.316 33.519-34.834 60.335l32.158 55.699c1.189 2.06 4.163 2.06 5.353 0l13.397-23.205-18.76-32.494c-.963-1.667-1.775-3.361-2.473-5.07z" fill="#fb2b3a"></path><g><circle cx="413.511" cy="342.918" fill="#fff" r="14.409"></circle>
+</g><path d="m409.183 342.918c0-6.182 3.9-11.439 9.368-13.484-1.571-.588-3.264-.924-5.04-.924-7.958 0-14.408 6.451-14.408 14.409s6.451 14.409 14.408 14.409c1.776 0 3.469-.337 5.04-.924-5.468-2.047-9.368-7.304-9.368-13.486z" fill="#f2fbff"></path>
+</g><g><g><path d="m99.58 375.867 33.285-57.651c16.025-27.755-4.006-62.45-36.055-62.45-32.049 0-52.08 34.694-36.055 62.45l33.285 57.651c1.231 2.133 4.309 2.133 5.54 0z" fill="#fd4755"></path>
+</g><path d="m89.902 312.266c-4.756-2.492-8.005-7.469-8.005-13.21 0-5.193 2.657-9.761 6.682-12.432 3.327-12.208 12.121-22.705 24.226-27.712-4.851-2.007-10.224-3.146-15.995-3.146-32.049 0-52.08 34.694-36.055 62.449l33.285 57.651c1.231 2.133 4.309 2.133 5.541 0l13.224-22.906-20.06-34.745c-1.128-1.953-2.064-3.942-2.843-5.949z" fill="#fb2b3a"></path><g><circle cx="96.81" cy="299.056" fill="#fff" r="14.914"></circle>
+</g><path d="m92 299.056c0-6.46 4.115-11.945 9.862-14.017-1.58-.57-3.276-.896-5.052-.896-8.236 0-14.913 6.677-14.913 14.914s6.677 14.914 14.913 14.914c1.776 0 3.472-.327 5.052-.896-5.747-2.074-9.862-7.558-9.862-14.019z" fill="#f2fbff"></path>
+</g><g><circle cx="175.646" cy="398.734" fill="#01c0fa" r="35.026"></circle>
+</g><g><path d="m171.525 398.734c0-13.797 7.98-25.725 19.573-31.435-4.662-2.296-9.905-3.591-15.453-3.591-19.344 0-35.026 15.682-35.026 35.026s15.682 35.026 35.026 35.026c5.548 0 10.791-1.295 15.453-3.591-11.593-5.71-19.573-17.638-19.573-31.435z" fill="#08a9f1"></path>
+</g><g><path d="m25.755 403.467v58.72c0 1.707 1.384 3.091 3.091 3.091h58.72c-.001-34.137-27.674-61.811-61.811-61.811z" fill="#01c0fa"></path>
+</g><g><path d="m28.845 465.278h33.481c-1.707 0-3.091-1.384-3.091-3.091v-48.855c-9.65-6.233-21.138-9.865-33.481-9.865v58.72c.001 1.707 1.384 3.091 3.091 3.091z" fill="#08a9f1"></path>
+</g><g><g><path d="m483.155 472.778h-454.31c-5.839 0-10.59-4.751-10.59-10.59v-328.064c0-5.839 4.751-10.59 10.59-10.59h454.311c5.839 0 10.59 4.751 10.59 10.59v328.063c-.001 5.84-4.752 10.591-10.591 10.591zm-449.9-15h445.49v-319.244h-445.49z" fill="#99e6fc"></path>
+</g>
+</g><g><g><path d="m147.311 192.549 48.193-83.473c22.609-39.159-5.652-88.108-50.869-88.108-45.217 0-73.478 48.949-50.869 88.108l48.193 83.473c1.188 2.06 4.162 2.06 5.352 0z" fill="#fd4755"></path>
+</g><path d="m134.009 103.102c-7.688-3.887-12.963-11.854-12.963-21.057 0-8.288 4.278-15.573 10.744-19.78 5.222-16.584 17.661-30.651 34.478-37.26-6.596-2.592-13.864-4.038-21.634-4.038-45.217 0-73.478 48.949-50.869 88.108l48.193 83.473c1.19 2.06 4.163 2.06 5.353 0l18.957-32.835-29.236-50.638c-1.136-1.968-2.139-3.962-3.023-5.973z" fill="#fb2b3a"></path><g><circle cx="144.634" cy="82.045" fill="#fff" r="23.588"></circle>
+</g><g><path d="m142.68 82.045c0-9.127 5.187-17.037 12.771-20.959-3.241-1.676-6.917-2.629-10.817-2.629-13.027 0-23.588 10.561-23.588 23.588s10.561 23.588 23.588 23.588c3.9 0 7.576-.952 10.817-2.628-7.584-3.923-12.771-11.833-12.771-20.96z" fill="#f2fbff"></path>
+</g>
+</g>
+</g></svg>
+            
+            
+          </span>
+                <h3 class="u-align-center u-text u-text-13"> Spatial Analysis</h3>
+                <p class="u-align-center u-text u-text-14"> Spatially analyze risk using a web-based map interface</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-grey-10 u-section-3" id="carousel_f469">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1"> Using the online tool...</h2>
+        <p class="u-text u-text-default u-text-2">You can simply use the GUI of RiskChanges SDSS by creating an organization and project.</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-palette-2-dark-1 u-spacing-12 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1e86"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-1e86"><rect fill="#e3e4e2" height="392" rx="24" width="368" x="56" y="24"></rect><path d="m400 24h-320a24 24 0 0 0 -24 24v40h368v-40a24 24 0 0 0 -24-24z" fill="#0093b9"></path><path d="m440.224 495.578h-88v-144h-62.745a17.255 17.255 0 0 1 -17.255-17.255 17.255 17.255 0 0 1 14.564-17.044l116.452-18.387a24 24 0 0 1 26.82 17.113l10.164 35.573z" fill="#f5be9a"></path><path d="m471.772 351.578h-223.548l-12.632 8.422h-19.592a8 8 0 0 0 -8 8 8 8 0 0 0 8 8h20.856l11.368 7.578h224a16 16 0 0 0 15.982-16.773c-.406-8.605-7.818-15.227-16.434-15.227z" fill="#0093b9"></path><path d="m488.224 367.578a16 16 0 0 0 -16-16h-16v32h16a16 16 0 0 0 16-16z" fill="#e3e4e2"></path><path d="m352.224 447.578-17.717-7.086a35.45 35.45 0 0 1 -22.283-32.914l-27.024-27.029a16.97 16.97 0 0 1 -4.971-12 16.971 16.971 0 0 1 16.971-16.971h3.023a16.972 16.972 0 0 1 7.589 1.792l60.417 30.208 24 24z" fill="#f5be9a"></path><path d="m96 128h128v128h-128z" fill="#0093b9"></path><circle cx="160" cy="184" fill="#f6bc1b" r="24"></circle><path d="m128 256v-16a32 32 0 0 1 32-32 32 32 0 0 1 32 32v16z" fill="#f6bc1b"></path><path d="m64 392v-296h352v184h16v-232a32.036 32.036 0 0 0 -32-32h-320a32.036 32.036 0 0 0 -32 32v344a32.036 32.036 0 0 0 32 32h192v-16h-192a16.019 16.019 0 0 1 -16-16zm16-360h320a16.019 16.019 0 0 1 16 16v32h-352v-32a16.019 16.019 0 0 1 16-16z"></path><path d="m80 48h16v16h-16z"></path><path d="m112 48h16v16h-16z"></path><path d="m144 48h16v16h-16z"></path><path d="m472 344h-25.965l-8.507-29.772a32.036 32.036 0 0 0 -35.759-22.817l-116.453 18.389a25.239 25.239 0 0 0 -19.552 34.2h-17.764a8.005 8.005 0 0 0 -4.438 1.344l-21.984 14.656h-13.578v16h13.578l21.984 14.656a8.005 8.005 0 0 0 4.438 1.344h36.686l19.448 19.447a43.214 43.214 0 0 0 27.178 36.894l12.688 5.075v42.584h16v-48a8 8 0 0 0 -5.028-7.428l-17.718-7.087a27.315 27.315 0 0 1 -17.254-25.485 8 8 0 0 0 -2.343-5.657l-27.029-27.03a8.97 8.97 0 0 1 6.343-15.313h3.023a9.008 9.008 0 0 1 4.011.947l59.256 29.628 23.082 23.082 11.314-11.314-10.343-10.343h44.686v104h16v-104h24a24 24 0 0 0 0-48zm-233.578 24 12-8h23.251a24.994 24.994 0 0 0 -.67 16h-22.581zm58.549-24h-7.716a9.255 9.255 0 0 1 -1.443-18.4l116.453-18.387a16.007 16.007 0 0 1 17.879 11.408l7.25 25.379h-42.08l10.343-10.343-11.314-11.314-21.656 21.657zm72.918 32-32-16h110.111v16zm102.111 0h-8v-16h8a8 8 0 0 1 0 16z"></path><path d="m232 256v-128a8 8 0 0 0 -8-8h-128a8 8 0 0 0 -8 8v128a8 8 0 0 0 8 8h128a8 8 0 0 0 8-8zm-72-40a24.028 24.028 0 0 1 24 24v8h-48v-8a24.028 24.028 0 0 1 24-24zm-16-32a16 16 0 1 1 16 16 16.019 16.019 0 0 1 -16-16zm72 64h-16v-8a39.994 39.994 0 0 0 -17.632-33.146 32 32 0 1 0 -44.736 0 39.994 39.994 0 0 0 -17.632 33.146v8h-16v-112h112z"></path><path d="m128 280h96v16h-96z"></path><path d="m96 280h16v16h-16z"></path><path d="m296 136h96v16h-96z"></path><path d="m264 168h128v16h-128z"></path><path d="m264 200h128v16h-128z"></path><path d="m264 232h128v16h-128z"></path><path d="m264 136h16v16h-16z"></path><path d="m448 56h16v160h-16z"></path><path d="m448 232h16v16h-16z"></path><path d="m91.61 345.435-11.038 27.594 14.856 5.942 9.384-23.459 4.993 9.987a14 14 0 0 0 20.288 5.387l12.887-8.592 9.605 9.605a13.907 13.907 0 0 0 9.9 4.1h29.515v-15.999h-28.687l-10.177-10.179a14.037 14.037 0 0 0 -17.666-1.749l-12.37 8.244-5.972-11.944a14 14 0 0 0 -25.521 1.063z"></path></svg></span>
+                <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-palette-1-dark-2 u-text-3">Register and Initiate</h5>
+                <p class="u-text u-text-palette-2-dark-2 u-text-4">You will need to register in the system to use it. After registration you can create organization and project in which you can work on.</p>
+                <a href="http://riskchanges.org/app/#/login" class="u-active-palette-1-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">Register and Start</a>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-palette-2-dark-1 u-spacing-12 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512.293 512.293" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-8505"></use></svg><svg class="u-svg-content" viewBox="0 0 512.293 512.293" x="0px" y="0px" id="svg-8505" style="enable-background:new 0 0 512.293 512.293;"><path style="fill:#BBDEFB;" d="M402.148,149.606C384.338,63.054,299.735,7.328,213.183,25.138  C139.07,40.389,85.774,105.472,85.434,181.136c0,3.605,0.149,7.296,0.469,11.2C33.178,197.917-5.04,245.183,0.541,297.908  c5.173,48.87,46.416,85.943,95.559,85.895h11.2c-0.256-3.541-0.533-7.061-0.533-10.667c0-76.583,62.083-138.667,138.667-138.667  S384.1,296.553,384.1,373.136c0,3.605-0.277,7.125-0.533,10.667h11.2c64.73,0.177,117.348-52.154,117.525-116.885  C512.462,204.807,464.148,153.348,402.148,149.606L402.148,149.606z"></path><circle style="fill:#4CAF50;" cx="245.434" cy="373.136" r="117.333"></circle><g><path style="fill:#FAFAFA;" d="M245.434,447.803c-5.891,0-10.667-4.776-10.667-10.667v-128c0-5.891,4.776-10.667,10.667-10.667   s10.667,4.776,10.667,10.667v128C256.1,443.027,251.325,447.803,245.434,447.803z"></path><path style="fill:#FAFAFA;" d="M288.1,362.47c-2.831,0.005-5.548-1.115-7.552-3.115l-35.115-35.136l-35.115,35.136   c-4.237,4.093-10.99,3.975-15.083-0.262c-3.993-4.134-3.993-10.687,0-14.821l42.667-42.667c4.165-4.164,10.917-4.164,15.083,0   l42.667,42.667c4.159,4.172,4.149,10.926-0.024,15.085C293.63,361.35,290.923,362.469,288.1,362.47z"></path>
+</g></svg></span>
+                <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-palette-1-dark-2 u-text-5">Upload Data</h5>
+                <p class="u-text u-text-palette-2-dark-2 u-text-6">After Registration you can upload the data from your PC or bring it from Geonode and start calculating the natural hazard risk right away.</p>
+                <a href="https://pypi.org/project/RiskChangesDesktop/" class="u-active-palette-1-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">How to Calculate</a>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-icon u-icon-circle u-palette-2-dark-1 u-spacing-12 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1c29"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-1c29"><path d="m383.5 373.44s-7.5 74.56 40.5 90.56v48h80v-216l-56-112z" fill="#f4a56e"></path><path d="m87.5 512v-48c48-16 40.741-89.073 40.741-89.073l-64.241-190.927-56.5 112v216z" fill="#f4a56e"></path><path d="m424 104 24-8v278.927l-34.655.572s-66.189-14.8-121.6 29.4a10 10 0 0 0 -3.745 7.816v11.285h-48v-10.2a10.007 10.007 0 0 0 -5.239-8.8c-16.821-9.14-70.075-35.858-136.572-29.208l-34.189-.865v-278.927l24 8 176 68.858z" fill="#087182"></path><path d="m88 229.655v-149.655c20.411-.729 64.19.377 96 8a297.851 297.851 0 0 1 80 32v264a297.843 297.843 0 0 0 -80-32c-31.81-7.623-75.589-8.729-96-8v-54.91" fill="#90e3f5"></path><path d="m424 289.557v54.443a214.375 214.375 0 0 0 -64 0 218.3 218.3 0 0 0 -96 40v-264a218.3 218.3 0 0 1 96-40 214.359 214.359 0 0 1 64 0v150.067" fill="#77d8e8"></path><path d="m120 32h16v16h-16z" fill="#f69038"></path><path d="m376 168h16v16h-16z" fill="#0f8ca8"></path><path d="m424 32h16v16h-16z" fill="#90e3f5"></path><path d="m0 189.694h16v16h-16z" fill="#90e3f5"></path><path d="m232 464h16v16h-16z" fill="#f69038"></path><circle cx="180" cy="436" fill="#f69038" r="20"></circle><circle cx="52" cy="44" fill="#90e3f5" r="20"></circle><path d="m278.142 33.858 25.858 14.142-25.858 14.142-14.142 25.858-14.142-25.858-25.858-14.142 25.858-14.142 14.142-25.858z" fill="#f69038"></path><path d="m358.142 449.858 25.858 14.142-25.858 14.142-14.142 25.858-14.142-25.858-25.858-14.142 25.858-14.142 14.142-25.858z" fill="#90e3f5"></path><g fill="#0f8ca8"><path d="m228.031 174.946c-53-30.289-106.37-23.1-106.9-23.026l-2.264-15.84c2.4-.341 59.382-8.009 117.1 24.974z"></path><path d="m228.031 214.946c-53-30.289-106.37-23.1-106.9-23.026l-2.264-15.84c2.4-.341 59.382-8.009 117.1 24.974z"></path><path d="m291.969 334.946-7.937-13.893c57.718-32.982 114.7-25.314 117.1-24.974l-2.252 15.841c-.534-.071-54.129-7.133-106.911 23.026z"></path><path d="m291.969 167.835-7.937-13.893c57.718-32.982 114.7-25.315 117.1-24.974l-2.252 15.842c-.534-.072-54.129-7.135-106.911 23.025z"></path>
+</g><path d="m120.142 109.555c20.411-.729 64.19.377 96 8a297.1 297.1 0 0 1 47.858 15.877v-13.432a297.851 297.851 0 0 0 -80-32c-31.81-7.623-75.589-8.729-96-8v264c7.9-.282 19.3-.287 32.142.251z" fill="#fafcfc" opacity=".3"></path><path d="m396.365 208s-25.834 45.1-1.834 69.1l61.39 61.879 10.746-42.979z" fill="#232626" opacity=".2"></path><path d="m115.955 208s25.834 45.1 1.834 69.1l-61.389 61.879-10.746-42.979z" fill="#232626" opacity=".2"></path><path d="m504 512v-216l-106.776-88a63.547 63.547 0 0 0 8 64l42.776 40v24s-48 0-32 80l8 48v48s82.014-2.014 80 0z" fill="#ffbe92"></path><path d="m7.5 512v-216l106.776-88a63.547 63.547 0 0 1 -8 64l-42.776 40v24s48 0 32 80l-8 48v48z" fill="#ffbe92"></path></svg></span>
+                <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-palette-1-dark-2 u-text-7">Learn MORE</h5>
+                <p class="u-text u-text-palette-2-dark-2 u-text-8">Read the documentation on how the calculation are done behind the code and how to use the system to calculate the multi-hazard risk.</p>
+                <a href="https://sdss-documentation.readthedocs.io/en/latest/" class="u-active-palette-1-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-1-dark-2 u-palette-1-dark-3 u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-3">Read the docs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-grey-15 u-section-4" id="carousel_a345">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-palette-2-dark-1 u-text-1"> For advanced users...</h2>
+        <p class="u-text u-text-2">You can simply use the core of RiskChanges SDSS python library and customize the computation as you require.</p>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1"><span class="u-icon u-icon-circle u-palette-1-base u-spacing-12 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-dd7d"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-dd7d"><g><path d="m481.081 438.5h-450.162c-17.076 0-30.919-13.843-30.919-30.919v-270.479h512v270.479c0 17.076-13.843 30.919-30.919 30.919z" fill="#a9dbf5"></path><path d="m481.095 137.102v301.398c17.069 0 30.905-13.849 30.905-30.932v-270.466z" fill="#88c3e0"></path><g fill="#43809f"><path d="m103.87 233.967c-2.929-2.928-7.678-2.928-10.606 0l-46.431 46.431c-2.929 2.93-2.929 7.678 0 10.607l45.816 45.816c1.464 1.464 3.384 2.196 5.303 2.196s3.839-.732 5.303-2.196c2.929-2.93 2.929-7.678 0-10.607l-40.513-40.513 41.127-41.127c2.93-2.929 2.93-7.678.001-10.607z"></path><path d="m264.52 280.397-46.431-46.431c-2.929-2.928-7.678-2.928-10.606 0-2.929 2.93-2.929 7.678 0 10.607l41.127 41.127-40.513 40.513c-2.929 2.93-2.929 7.678 0 10.607 1.464 1.464 3.384 2.196 5.303 2.196s3.839-.732 5.303-2.196l45.817-45.816c2.928-2.929 2.928-7.677 0-10.607z"></path><path d="m185.813 206.063c-3.874-1.471-8.203.477-9.673 4.351l-54.902 144.638c-1.47 3.872.478 8.203 4.35 9.673.876.333 1.775.49 2.66.49 3.025 0 5.876-1.844 7.013-4.841l54.902-144.638c1.47-3.872-.477-8.203-4.35-9.673z"></path>
+</g><path d="m386.318 234.23h-48.419c-8.534 0-15.453-6.918-15.453-15.453 0-8.534 6.918-15.453 15.453-15.453h48.419c8.534 0 15.453 6.918 15.453 15.453 0 8.534-6.919 15.453-15.453 15.453z" fill="#29cef6"></path><path d="m465.642 296.041h-127.743c-8.534 0-15.453-6.918-15.453-15.453 0-8.534 6.918-15.453 15.453-15.453h127.742c8.534 0 15.453 6.918 15.453 15.453.001 8.534-6.918 15.453-15.452 15.453z" fill="#ffc328"></path><path d="m427.695 357.852h-89.796c-8.534 0-15.453-6.918-15.453-15.453 0-8.534 6.918-15.453 15.453-15.453h89.796c8.534 0 15.453 6.918 15.453 15.453 0 8.534-6.919 15.453-15.453 15.453z" fill="#f78e36"></path><path d="m512 147.737h-512v-43.318c0-17.076 13.843-30.919 30.919-30.919h450.162c17.076 0 30.919 13.843 30.919 30.919z" fill="#43809f"></path><path d="m481.095 73.5v74.237h30.905v-43.305c0-17.083-13.837-30.932-30.905-30.932z" fill="#3a7190"></path><circle cx="49.455" cy="111.126" fill="#29cef6" r="15.453"></circle><circle cx="109.37" cy="111.126" fill="#f3f3f3" r="15.453"></circle><circle cx="169.285" cy="111.126" fill="#f78e36" r="15.453"></circle>
+</g></svg></span>
+                <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-palette-2-base u-text-3">Start with basics</h5>
+                <p class="u-text u-text-palette-2-dark-2 u-text-4">You can download the RiskChanges core compuation code and test notebooks and give it a try yourself.</p>
+                <a href="https://github.com/ashokdahal/RiskChangesDesktop" class="u-active-palette-2-light-2 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-2 u-palette-2-base u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-1">Download Code</a>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-2">
+              <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-icon u-icon-circle u-palette-1-base u-spacing-12 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f6ec"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-f6ec"><g><g><path d="m301 512h-90v-51.112c-24.111-5.303-47.256-14.912-68.027-28.228l-35.479 35.464-63.633-63.633 35.479-35.464c-13.301-20.786-22.91-43.93-28.213-68.027h-51.127v-90h51.127c5.303-24.097 14.912-47.241 28.213-68.027l-35.479-35.464 63.633-63.633 35.479 35.464c20.771-13.316 43.916-22.925 68.027-28.228v-51.112h90v51.112c24.111 5.303 47.256 14.912 68.027 28.228l35.479-35.464 63.633 63.633-35.479 35.464c13.301 20.786 22.91 43.931 28.213 68.027h51.127v90h-51.127c-5.303 24.097-14.912 47.241-28.213 68.027l35.479 35.464-63.633 63.633-35.479-35.464c-20.771 13.315-43.916 22.925-68.027 28.228z" fill="#f0e6e1"></path>
+</g><path d="m432.66 142.973 35.479-35.464-63.633-63.633-35.479 35.464c-20.771-13.316-43.916-22.925-68.027-28.228v-51.112h-45v512h45v-51.112c24.111-5.303 47.256-14.912 68.027-28.228l35.479 35.464 63.633-63.633-35.479-35.464c13.301-20.786 22.91-43.931 28.213-68.027h51.127v-90h-51.127c-5.303-24.097-14.912-47.241-28.213-68.027z" fill="#e6dbcf"></path><g><path d="m256 376c-66.182 0-120-53.833-120-120s53.818-120 120-120 120 53.833 120 120-53.818 120-120 120z" fill="#79d987"></path>
+</g><path d="m376 256c0-66.167-53.818-120-120-120v240c66.182 0 120-53.833 120-120z" fill="#5ec97f"></path><g id="Easy_installation_1_"><g><path d="m241 307.211-40.605-40.606 21.21-21.21 19.395 19.394 49.395-49.394 21.21 21.21z" fill="#f9f4f3"></path>
+</g>
+</g><path d="m256 292.211 55.605-55.606-21.21-21.21-34.395 34.394z" fill="#f0e6e1"></path>
+</g></svg></span>
+                <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-palette-2-base u-text-5">Install From PIP</h5>
+                <p class="u-text u-text-palette-2-dark-2 u-text-6">You can download and install the RiskChanges Library in your python enviroment and start using it for your project.</p>
+                <a href="https://pypi.org/project/RiskChangesDesktop/" class="u-active-palette-2-light-2 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-2 u-palette-2-base u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-2">How to Install</a>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-list-item u-radius-15 u-repeater-item u-shape-round u-white u-list-item-3">
+              <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-icon u-icon-circle u-palette-1-base u-spacing-12 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1c29"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-1c29"><path d="m383.5 373.44s-7.5 74.56 40.5 90.56v48h80v-216l-56-112z" fill="#f4a56e"></path><path d="m87.5 512v-48c48-16 40.741-89.073 40.741-89.073l-64.241-190.927-56.5 112v216z" fill="#f4a56e"></path><path d="m424 104 24-8v278.927l-34.655.572s-66.189-14.8-121.6 29.4a10 10 0 0 0 -3.745 7.816v11.285h-48v-10.2a10.007 10.007 0 0 0 -5.239-8.8c-16.821-9.14-70.075-35.858-136.572-29.208l-34.189-.865v-278.927l24 8 176 68.858z" fill="#087182"></path><path d="m88 229.655v-149.655c20.411-.729 64.19.377 96 8a297.851 297.851 0 0 1 80 32v264a297.843 297.843 0 0 0 -80-32c-31.81-7.623-75.589-8.729-96-8v-54.91" fill="#90e3f5"></path><path d="m424 289.557v54.443a214.375 214.375 0 0 0 -64 0 218.3 218.3 0 0 0 -96 40v-264a218.3 218.3 0 0 1 96-40 214.359 214.359 0 0 1 64 0v150.067" fill="#77d8e8"></path><path d="m120 32h16v16h-16z" fill="#f69038"></path><path d="m376 168h16v16h-16z" fill="#0f8ca8"></path><path d="m424 32h16v16h-16z" fill="#90e3f5"></path><path d="m0 189.694h16v16h-16z" fill="#90e3f5"></path><path d="m232 464h16v16h-16z" fill="#f69038"></path><circle cx="180" cy="436" fill="#f69038" r="20"></circle><circle cx="52" cy="44" fill="#90e3f5" r="20"></circle><path d="m278.142 33.858 25.858 14.142-25.858 14.142-14.142 25.858-14.142-25.858-25.858-14.142 25.858-14.142 14.142-25.858z" fill="#f69038"></path><path d="m358.142 449.858 25.858 14.142-25.858 14.142-14.142 25.858-14.142-25.858-25.858-14.142 25.858-14.142 14.142-25.858z" fill="#90e3f5"></path><g fill="#0f8ca8"><path d="m228.031 174.946c-53-30.289-106.37-23.1-106.9-23.026l-2.264-15.84c2.4-.341 59.382-8.009 117.1 24.974z"></path><path d="m228.031 214.946c-53-30.289-106.37-23.1-106.9-23.026l-2.264-15.84c2.4-.341 59.382-8.009 117.1 24.974z"></path><path d="m291.969 334.946-7.937-13.893c57.718-32.982 114.7-25.314 117.1-24.974l-2.252 15.841c-.534-.071-54.129-7.133-106.911 23.026z"></path><path d="m291.969 167.835-7.937-13.893c57.718-32.982 114.7-25.315 117.1-24.974l-2.252 15.842c-.534-.072-54.129-7.135-106.911 23.025z"></path>
+</g><path d="m120.142 109.555c20.411-.729 64.19.377 96 8a297.1 297.1 0 0 1 47.858 15.877v-13.432a297.851 297.851 0 0 0 -80-32c-31.81-7.623-75.589-8.729-96-8v264c7.9-.282 19.3-.287 32.142.251z" fill="#fafcfc" opacity=".3"></path><path d="m396.365 208s-25.834 45.1-1.834 69.1l61.39 61.879 10.746-42.979z" fill="#232626" opacity=".2"></path><path d="m115.955 208s25.834 45.1 1.834 69.1l-61.389 61.879-10.746-42.979z" fill="#232626" opacity=".2"></path><path d="m504 512v-216l-106.776-88a63.547 63.547 0 0 0 8 64l42.776 40v24s-48 0-32 80l8 48v48s82.014-2.014 80 0z" fill="#ffbe92"></path><path d="m7.5 512v-216l106.776-88a63.547 63.547 0 0 1 -8 64l-42.776 40v24s48 0 32 80l-8 48v48z" fill="#ffbe92"></path></svg></span>
+                <h5 class="u-custom-font u-font-raleway u-text u-text-default u-text-palette-2-base u-text-7">Learn MORE</h5>
+                <p class="u-text u-text-palette-2-dark-2 u-text-8">Read the documentation on how the calculation are done behind the code and how to use the code effectively.</p>
+                <a href="https://sdss-documentation.readthedocs.io/en/latest/" class="u-active-palette-2-light-2 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-2 u-palette-2-base u-radius-50 u-text-active-white u-text-body-alt-color u-text-hover-white u-btn-3">Read the docs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section>
+  <h2 class="u-text " style="text-align: center;"> Try RiskChanges</h2>
+  
+  <div id='form_load' style="margin-left: 5%;">
+    <form class="form-inline " onsubmit="loaddata();return false" >
+      <div class="form-group mb-2">
+        <select class="form-control " aria-label="Default select example" id = "Hazard">
+          <option selected>Select Hazard</option>
+          <option value="FL">Flood</option>
+          <option value="DF">DebrisFlow</option>
+          <option value="LS">Landslide</option>
+          </select>
+  
+      </div>
+  
+      <div class="form-group mx-sm-3  mb-2">
+  
+        <select class="form-control" aria-label="Default select example" id = "Frequency">
+          <option selected>Select Frequency</option>
+          <option value="20">20 Years</option>
+          <option value="50">50 Years</option>
+          <option value="100">100 Years</option>
+          <option value="200">200 Years</option>
+          </select>
+      </div>
+      
+      <div class="form-group mb-2">
+  
+        <select class="form-control form-select-sm" aria-label="Default select example" id = "Scenario">
+          <option selected>Select Scenario</option>
+          <option value="S0">Current situation</option>
+          <option value="S1">2050: Increase as usual</option>
+          <option value="S2">2050: Cautious growth</option>
+          </select>
+      </div>
+  
+      <div class="form-group mx-sm-3 mb-2">
+  
+        <select class="form-control form-select-sm" aria-label="Default select example" id = "Alternative">
+          <option selected>Select Alternative</option>
+          <option value="A0">No risk reduction</option>
+          <option value="A1">Alternative 1: engineering solutions</option>
+          <option value="A2">Alternative 2: ecological solutions</option>
+          <option value="A3">Alternative 3: relocation</option>
+          </select>
+      </div>
+      <div class="form-group mb-2">
+  
+        <select class="form-control form-select-sm" aria-label="Default select example" id = "Year">
+          <option selected>Reference Year</option>
+          <option value="2020">2020</option>
+          <option value="2050">2050</option>
+          </select>
+      </div>
+  
+      <button type="submit" class="btn btn-primary mb-2 mx-sm-3">Load Data</button>
+      </form>
+  
+  
+  </div>
+  <div id='map' style="height: 500PX;width: 90%;z-index:0 ;margin-left: 5%;"></div>
+  
+  <script type="text/javascript" src="risk_data.js"></script>
+  
+  <script type="text/javascript">
+    var attr_col='None'
+    var map = L.map('map').setView([15.632, -61.45], 15);
+
+    map.scrollWheelZoom.disable();
+      L.esri.tiledMapLayer({
+      maxZoom:20,
+      minZoom: 14,
+        url: 'https://tiles.arcgis.com/tiles/fpPKDlJ3n8eBtEzb/arcgis/rest/services/RiskChanges_Basemap_v2/MapServer'
+      }).addTo(map);
+    L.control.scale().addTo(map);
+    var info = L.control();
+  
+  info.onAdd = function (map) {
+      this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+      this.update();
+      return this._div;
+  };
+  
+  // method that we will use to update the control based on feature properties passed
+  info.update = function () {
+      this._div.innerHTML = '<h4>Risk Information</h4>';
+  };
+  
+  info.addTo(map);
+  
+    // get color depending on population density value
+    function getColor(d) {
+      return  d>100000? '#892813' ://dark red
+          d > 10000 ? '#d93c1a' : //red
+          d > 5000  ? '#e88312' ://orange
+          d > 1000  ? '#e8d112' ://yellow
+          d > 0  ? '#1eab07' ://green
+                '#FFEDA0';
+    }
+    
+    function style(feature,attribute) {
+      
+      return {
+        weight: 0.8,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.4,
+        fillColor: getColor(feature.properties[attr_col])
+      };
+    }
+    function loaddata(){
+      //attr_col= #add name here
+  
+      
+  
+      var Alternative = document.getElementById('Alternative');
+        var Scenario =document.getElementById('Scenario');
+      var Frequency = document.getElementById('Frequency');
+      var Hazard =document.getElementById('Hazard');
+      var Year = document.getElementById('Year');
+      
+      attr_col=Hazard.value+'_'+Frequency.value+'_'+Year.value+'_'+Alternative.value+'_'+Scenario.value+'_PH' //LS_50_2020_A2_S0_PH
+      console.info(attr_col)
+      map.eachLayer(function(layer) {
+    if (!!layer.toGeoJSON) {
+      map.removeLayer(layer);
+    }
+  });
+      var geojson = L.geoJson(hazardData, {
+      style: style,
+    }).addTo(map);
+    info._div.innerHTML = '<h4>Risk Information:</h4><br>'+'<b>Hazard Type: </b>'+Hazard.options[Hazard.selectedIndex].text+'<br>'
+                +'<b>Alternative: </b>'+Alternative.options[Alternative.selectedIndex].text+'<br>'
+                +'<b>Scenario: </b>'+Scenario.options[Scenario.selectedIndex].text+'<br>'
+                +'<b>Frequency: </b>'+Frequency.options[Frequency.selectedIndex].text+'<br>'
+                +'<b>Computation Year: </b>'+Year.options[Year.selectedIndex].text+'<br>';
+  
+    }
+    
+    var legend = L.control({position: 'topright'});
+  
+  legend.onAdd = function (map) {
+    
+      var div = L.DomUtil.create('div', 'info legend'),
+          grades = [0, 1000, 5000, 10000, 100000],
+          labels = ['Low','Medium','High','Very High','Extreme'];
+  
+      // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+              '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+              labels[i]+'<br>';
+      }
+  
+      return div;
+  };
+  
+  legend.addTo(map);
+    
+  
+  </script>
+</section>
+    <section class="u-align-center u-clearfix u-section-6" id="carousel_bb29">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-custom-font u-font-open-sans u-text u-text-default u-text-1">Our Team</h1>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-center u-container-style u-custom-item u-grey-5 u-list-item u-repeater-item u-list-item-1">
+              <div class="u-container-layout u-similar-container u-container-layout-1">
+                <div alt="" class="u-image u-image-circle u-image-1" data-image-width="200" data-image-height="200"></div>
+                <h5 class="u-text u-text-default u-text-2">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-1" href="https://people.utwente.nl/c.j.vanwesten">Prof. Dr. Cees Van Westen</a>
+                </h5>
+                <h6 class="u-text u-text-default u-text-3">Team Lead UT-ITC</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-2">
+                <div alt="" class="u-image u-image-circle u-image-2" data-image-width="209" data-image-height="241"></div>
+                <h5 class="u-text u-text-default u-text-4">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-2" href="http://geoinfo.ait.ac.th/about-us/our-team/">Dr. Manzul Kumar Hazarika</a>
+                </h5>
+                <h6 class="u-text u-text-default u-text-5">Team Lead GIC-AIT</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-grey-5 u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <div alt="" class="u-image u-image-circle u-image-3" data-image-width="390" data-image-height="450"></div>
+                <h5 class="u-text u-text-default u-text-6">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-3" href="http://geoinfo.ait.ac.th/about-us/our-team/">Syams Nusurullah</a>
+                </h5>
+                <h6 class="u-text u-text-default u-text-7">Risk Management Expert</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <div alt="" class="u-image u-image-circle u-image-4" data-image-width="200" data-image-height="200"></div>
+                <h5 class="u-text u-text-default u-text-8">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-4" href="http://geoinfo.ait.ac.th/about-us/our-team/">Anish Ratna Shakya</a>
+                </h5>
+                <h6 class="u-text u-text-default u-text-9">Documentation Expert</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-grey-5 u-list-item u-repeater-item u-list-item-5">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <div alt="" class="u-image u-image-circle u-image-5" data-image-width="512" data-image-height="512"></div>
+                <h5 class="u-text u-text-default u-text-10">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-5" href="https://people.utwente.nl/a.dahal">Ashok Dahal</a>
+                </h5>
+                <h6 class="u-text u-text-default u-text-11">System Development</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-repeater-item u-white u-list-item-6">
+              <div class="u-container-layout u-similar-container u-container-layout-6">
+                <div alt="" class="u-image u-image-circle u-image-6" data-image-width="640" data-image-height="640"></div>
+                <h5 class="u-text u-text-default u-text-12">
+                  <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-grey-90 u-btn-6" href="http://geoinfo.ait.ac.th/about-us/our-team/">Tek Kshetri</a>
+                </h5>
+                <h6 class="u-text u-text-default u-text-13">System Development</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-grey-5 u-list-item u-repeater-item u-list-item-7">
+              <div class="u-container-layout u-similar-container u-container-layout-7">
+                <div alt="" class="u-image u-image-circle u-image-7" data-image-width="716" data-image-height="1080"></div>
+                <h5 class="u-text u-text-default u-text-14">Sahara Sedhain</h5>
+                <h6 class="u-text u-text-default u-text-15">Training and Documentation&nbsp;</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-list-item u-repeater-item u-white u-list-item-8">
+              <div class="u-container-layout u-similar-container u-container-layout-8">
+                <div alt="" class="u-image u-image-circle u-image-8" data-image-width="1000" data-image-height="1500"></div>
+                <h5 class="u-text u-text-default u-text-16">Dinesh Bishwokarma</h5>
+                <h6 class="u-text u-text-default u-text-17">Bug Testing</h6>
+              </div>
+            </div>
+            <div class="u-align-center u-container-style u-custom-item u-grey-5 u-list-item u-repeater-item u-list-item-9">
+              <div class="u-container-layout u-similar-container u-container-layout-9">
+                <div alt="" class="u-image u-image-circle u-image-9" data-image-width="716" data-image-height="1080"></div>
+                <h5 class="u-text u-text-default u-text-18">???</h5>
+                <h6 class="u-text u-text-default u-text-19">Bug Testing</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-clearfix u-grey-5 u-section-7" id="carousel_c9e4">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-1" data-image-width="150" data-image-height="99">
+                <div class="u-container-layout u-container-layout-1">
+                  <h2 class="u-text u-text-black u-text-1">Collaborate With US</h2>
+                  <h5 class="u-text u-text-grey-90 u-text-2">Join us on the path to make the better and safer world</h5>
+                </div>
+              </div>
+              <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-container-layout-2">
+                  <p class="u-text u-text-3">We appriciate your input of any kind such as financial, technical, educational or just by reporint bugs. you can communicate and support our initiative by posting youc comments and questions. Join us for further discussion in <a href="https://discord.gg/dSGPPgunb5" class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1">discord</a>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="u-align-center u-clearfix u-palette-5-light-3 u-section-8" id="sec-1f37">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-row">
+              <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-layout-cell-1">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-container-layout-1">
+                  <div class="u-align-center-xs u-social-icons u-spacing-20 u-social-icons-1">
+                    <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/name"><span class="u-icon u-social-facebook u-social-icon u-text-palette-3-dark-1 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-5e9f"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-5e9f"><path d="m512 256c0-141.4-114.6-256-256-256s-256 114.6-256 256 114.6 256 256 256c1.5 0 3 0 4.5-.1v-199.2h-55v-64.1h55v-47.2c0-54.7 33.4-84.5 82.2-84.5 23.4 0 43.5 1.7 49.3 2.5v57.2h-33.6c-26.5 0-31.7 12.6-31.7 31.1v40.8h63.5l-8.3 64.1h-55.2v189.5c107-30.7 185.3-129.2 185.3-246.1z"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/name"><span class="u-icon u-social-icon u-social-twitter u-text-palette-3-dark-1 u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-9173"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-9173"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/name"><span class="u-icon u-social-icon u-social-instagram u-text-palette-3-dark-1 u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-ddc9"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-ddc9"><path d="m305 256c0 27.0625-21.9375 49-49 49s-49-21.9375-49-49 21.9375-49 49-49 49 21.9375 49 49zm0 0"></path><path d="m370.59375 169.304688c-2.355469-6.382813-6.113281-12.160157-10.996094-16.902344-4.742187-4.882813-10.515625-8.640625-16.902344-10.996094-5.179687-2.011719-12.960937-4.40625-27.292968-5.058594-15.503906-.707031-20.152344-.859375-59.402344-.859375-39.253906 0-43.902344.148438-59.402344.855469-14.332031.65625-22.117187 3.050781-27.292968 5.0625-6.386719 2.355469-12.164063 6.113281-16.902344 10.996094-4.882813 4.742187-8.640625 10.515625-11 16.902344-2.011719 5.179687-4.40625 12.964843-5.058594 27.296874-.707031 15.5-.859375 20.148438-.859375 59.402344 0 39.25.152344 43.898438.859375 59.402344.652344 14.332031 3.046875 22.113281 5.058594 27.292969 2.359375 6.386719 6.113281 12.160156 10.996094 16.902343 4.742187 4.882813 10.515624 8.640626 16.902343 10.996094 5.179688 2.015625 12.964844 4.410156 27.296875 5.0625 15.5.707032 20.144532.855469 59.398438.855469 39.257812 0 43.90625-.148437 59.402344-.855469 14.332031-.652344 22.117187-3.046875 27.296874-5.0625 12.820313-4.945312 22.953126-15.078125 27.898438-27.898437 2.011719-5.179688 4.40625-12.960938 5.0625-27.292969.707031-15.503906.855469-20.152344.855469-59.402344 0-39.253906-.148438-43.902344-.855469-59.402344-.652344-14.332031-3.046875-22.117187-5.0625-27.296874zm-114.59375 162.179687c-41.691406 0-75.488281-33.792969-75.488281-75.484375s33.796875-75.484375 75.488281-75.484375c41.6875 0 75.484375 33.792969 75.484375 75.484375s-33.796875 75.484375-75.484375 75.484375zm78.46875-136.3125c-9.742188 0-17.640625-7.898437-17.640625-17.640625s7.898437-17.640625 17.640625-17.640625 17.640625 7.898437 17.640625 17.640625c-.003906 9.742188-7.898437 17.640625-17.640625 17.640625zm0 0"></path><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm146.113281 316.605469c-.710937 15.648437-3.199219 26.332031-6.832031 35.683593-7.636719 19.746094-23.246094 35.355469-42.992188 42.992188-9.347656 3.632812-20.035156 6.117188-35.679687 6.832031-15.675781.714844-20.683594.886719-60.605469.886719-39.925781 0-44.929687-.171875-60.609375-.886719-15.644531-.714843-26.332031-3.199219-35.679687-6.832031-9.8125-3.691406-18.695313-9.476562-26.039063-16.957031-7.476562-7.339844-13.261719-16.226563-16.953125-26.035157-3.632812-9.347656-6.121094-20.035156-6.832031-35.679687-.722656-15.679687-.890625-20.6875-.890625-60.609375s.167969-44.929688.886719-60.605469c.710937-15.648437 3.195312-26.332031 6.828125-35.683593 3.691406-9.808594 9.480468-18.695313 16.960937-26.035157 7.339844-7.480469 16.226563-13.265625 26.035157-16.957031 9.351562-3.632812 20.035156-6.117188 35.683593-6.832031 15.675781-.714844 20.683594-.886719 60.605469-.886719s44.929688.171875 60.605469.890625c15.648437.710937 26.332031 3.195313 35.683593 6.824219 9.808594 3.691406 18.695313 9.480468 26.039063 16.960937 7.476563 7.34375 13.265625 16.226563 16.953125 26.035157 3.636719 9.351562 6.121094 20.035156 6.835938 35.683593.714843 15.675781.882812 20.683594.882812 60.605469s-.167969 44.929688-.886719 60.605469zm0 0"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" title="linkedin" href="https://linkedin.com/name"><span class="u-icon u-social-custom u-social-icon u-text-palette-3-dark-1 u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2804"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" id="svg-2804"><path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"></path></svg></span>
+                    </a>
+                    <a class="u-social-url" target="_blank" title="pinterest" href="https://pinterest.com/name"><span class="u-icon u-social-custom u-social-icon u-text-palette-3-dark-1 u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 97.75 97.75" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-251c"></use></svg><svg class="u-svg-content" viewBox="0 0 97.75 97.75" x="0px" y="0px" id="svg-251c" style="enable-background:new 0 0 97.75 97.75;"><g><path d="M48.875,0C21.883,0,0,21.882,0,48.875S21.883,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.867,0,48.875,0z    M54.499,65.109c-4.521,0-8.773-2.444-10.229-5.219c0,0-2.432,9.645-2.943,11.506c-1.813,6.58-7.146,13.162-7.561,13.701   c-0.289,0.375-0.928,0.258-0.994-0.24c-0.113-0.838-1.475-9.139,0.127-15.909c0.801-3.4,5.383-22.814,5.383-22.814   s-1.334-2.673-1.334-6.625c0-6.205,3.596-10.837,8.074-10.837c3.807,0,5.645,2.859,5.645,6.286c0,3.828-2.436,9.552-3.693,14.856   c-1.051,4.441,2.225,8.064,6.605,8.064c7.933,0,13.272-10.188,13.272-22.261c0-9.174-6.176-16.044-17.418-16.044   c-12.697,0-20.615,9.471-20.615,20.052c0,3.646,1.078,6.221,2.764,8.21c0.773,0.915,0.883,1.283,0.602,2.333   c-0.203,0.771-0.66,2.625-0.854,3.358c-0.279,1.062-1.137,1.44-2.098,1.049c-5.846-2.387-8.572-8.793-8.572-15.994   c0-11.893,10.029-26.154,29.922-26.154c15.985,0,26.506,11.566,26.506,23.984C77.089,52.839,67.956,65.109,54.499,65.109z"></path>
+</g></svg></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-30 u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle u-container-layout-2">
+                  <h3 class="u-text u-text-default u-text-1">Contact Us</h3>
+                  <p class="u-text u-text-2">You can Connect with us via Social Media or just by sending an email, The classic way.</p>
+                  <a href="mailto:info@riskchanges.org" class="u-active-palette-1-dark-2 u-border-none u-btn u-button-style u-hover-palette-1-dark-2 u-btn-1">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-8521"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Copyrights: Riskchanges.org 2021</p>
+      </div></footer>
+  <section class="u-align-center u-clearfix u-cookies-consent u-palette-2-dark-1 u-cookies-consent" id="sec-5e2a">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+          <div class="u-gutter-0 u-layout">
+            <div class="u-layout-row">
+              <div class="u-container-style u-layout-cell u-left-cell u-size-43-md u-size-43-sm u-size-43-xs u-size-46-lg u-size-46-xl u-layout-cell-1">
+                <div class="u-container-layout u-container-layout-1">
+                  <h3 class="u-text u-text-default u-text-1">Cookies &amp; Privacy</h3>
+                  <p class="u-text u-text-2">This website uses Minimal cookies to ensure you get the best experience on our website.</p>
+                </div>
+              </div>
+              <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-14-lg u-size-14-xl u-size-17-md u-size-17-sm u-size-17-xs u-layout-cell-2">
+                <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-2">
+                  <a href="###" class="u-border-none u-btn u-button-confirm u-button-style u-palette-1-dark-3 u-btn-1">Confirm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <style>.u-cookies-consent {
+  background-image: none;
+}
+
+.u-cookies-consent .u-sheet-1 {
+  min-height: 97px;
+}
+
+.u-cookies-consent .u-layout-wrap-1 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.u-cookies-consent .u-layout-cell-1 {
+  min-height: 82px;
+}
+
+.u-cookies-consent .u-container-layout-1 {
+  padding: 4px 60px 7px;
+}
+
+.u-cookies-consent .u-text-1 {
+  margin-top: 1px;
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.u-cookies-consent .u-text-2 {
+  margin: 8px 46px 0 0;
+}
+
+.u-cookies-consent .u-layout-cell-2 {
+  min-height: 82px;
+}
+
+.u-cookies-consent .u-container-layout-2 {
+  padding: 17px 30px;
+}
+
+.u-cookies-consent .u-btn-1 {
+  background-image: none;
+  border-style: none;
+  margin: 0 auto 0 0;
+}
+
+@media (max-width: 1199px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 131px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 68px;
+  }
+
+  .u-cookies-consent .u-text-1 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-text-2 {
+    margin-right: 0;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 68px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 106px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 225px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 154px;
+  }
+
+  .u-cookies-consent .u-container-layout-1 {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 65px;
+  }
+
+  .u-cookies-consent .u-container-layout-2 {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-cookies-consent .u-sheet-1 {
+    min-height: 121px;
+  }
+
+  .u-cookies-consent .u-layout-cell-1 {
+    min-height: 100px;
+  }
+
+  .u-cookies-consent .u-layout-cell-2 {
+    min-height: 15px;
+  }
+}</style></section>
+
+</body></html>
