@@ -12766,7 +12766,7 @@ section.u-image,
 }
 .u-header.u-sticky,
 .u-overlap .u-header {
-  z-index: 2000000;
+  z-index: 20;
   padding-top: 0.1px;
 }
 .u-overlap .u-header.u-sticky {
@@ -12781,7 +12781,7 @@ section.u-image,
   position: absolute !important;
 }
 .u-overlap.u-offcanvas-opened .u-header.u-sticky + section {
-  z-index: 100;
+  z-index: -1;
 }
 .u-sticky:before {
   border-style: solid;
