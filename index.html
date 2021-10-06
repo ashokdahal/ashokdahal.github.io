@@ -672,7 +672,7 @@ calculation&nbsp;&nbsp;&nbsp; &nbsp;<br>
      //       url: 'https://tiles.arcgis.com/tiles/fpPKDlJ3n8eBtEzb/arcgis/rest/services/RiskChanges_Basemap_v2/MapServer'
     //      });
         var map = L.map('map',{layers:[layer1]}).setView([15.632, -61.45], 15);
-    
+        map.scrollWheelZoom.disable();
         
     
         //var baselayer=L.layerGroup([layer1,layer2]);
