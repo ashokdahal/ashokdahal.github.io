@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <script>
     (function () {
+      var html = document.documentElement;
+      html.classList.add("js-anim");
       try {
         var saved = localStorage.getItem("theme");
-        if (saved === "light") document.documentElement.setAttribute("data-theme", "light");
+        if (saved === "light") html.setAttribute("data-theme", "light");
       } catch (e) {}
     })();
   </script>
@@ -20,7 +22,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -64,23 +66,27 @@
     <section class="hero" id="top">
       <div class="wrap hero-inner">
         <div class="hero-text">
-          <p class="eyebrow">Faculty of Geo-Information Science and Earth Observation (ITC), University of Twente</p>
-          <h1>Ashok Dahal, PhD</h1>
-          <p class="hero-role">Assistant Professor of Artificial Intelligence</p>
-          <p class="hero-lede">
-            I work at the intersection of artificial intelligence and geoscience, developing physics-informed
-            and deep learning methods to understand and forecast landslides, earthquakes, and other natural
-            hazards across space and time.
-          </p>
-          <div class="hero-links">
-            <a class="btn btn-primary" href="#publications">View Publications</a>
-            <a class="btn btn-ghost" href="mailto:a.dahal@utwente.nl">Get in Touch</a>
+          <div class="hero-reveal">
+            <p class="eyebrow">Faculty of Geo-Information Science and Earth Observation (ITC), University of Twente</p>
           </div>
-          <ul class="hero-meta">
-            <li><span>ORCID</span><a href="https://orcid.org/0000-0003-3269-5575" target="_blank" rel="noopener">0000-0003-3269-5575</a></li>
-            <li><span>Scholar</span><a href="https://scholar.google.com/citations?user=yqDUVTUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile ↗</a></li>
-            <li><span>GitHub</span><a href="https://github.com/ashokdahal" target="_blank" rel="noopener">ashokdahal</a></li>
-          </ul>
+          <h1><span id="heroTypeTarget">Hello, I am Ashok Dahal!</span><span class="type-cursor" id="typeCursor" aria-hidden="true"></span></h1>
+          <div class="hero-reveal">
+            <p class="hero-role">Assistant Professor of Artificial Intelligence</p>
+            <p class="hero-lede">
+              I work at the intersection of artificial intelligence and geoscience, developing physics-informed
+              and deep learning methods to understand and forecast landslides, earthquakes, and other natural
+              hazards across space and time.
+            </p>
+            <div class="hero-links">
+              <a class="btn btn-primary" href="#publications">View Publications</a>
+              <a class="btn btn-ghost" href="mailto:a.dahal@utwente.nl">Get in Touch</a>
+            </div>
+            <ul class="hero-meta">
+              <li><span>ORCID</span><a href="https://orcid.org/0000-0003-3269-5575" target="_blank" rel="noopener">0000-0003-3269-5575</a></li>
+              <li><span>Scholar</span><a href="https://scholar.google.com/citations?user=yqDUVTUAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar profile ↗</a></li>
+              <li><span>GitHub</span><a href="https://github.com/ashokdahal" target="_blank" rel="noopener">ashokdahal</a></li>
+            </ul>
+          </div>
         </div>
         <div class="hero-portrait">
           <img src="assets/images/ashok-dahal-portrait.jpg" alt="Ashok Dahal holding the ceremonial staff at his PhD defence, University of Twente" width="1000" height="943" />
@@ -438,6 +444,7 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/hero-intro.js"></script>
   <script src="assets/js/publications.js"></script>
 </body>
 </html>

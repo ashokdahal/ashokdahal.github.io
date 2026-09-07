@@ -20,8 +20,8 @@
   --accent-glow: rgba(221, 124, 79, 0.22);
   --header-bg: rgba(20, 18, 16, 0.88);
 
-  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --serif: "Metamorphous", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 
   --maxw: 1080px;
 }
@@ -201,6 +201,46 @@ h1, h2, h3 {
   margin-bottom: 8px;
 }
 
+/* Heading stays invisible until hero-intro.js explicitly starts typing —
+   prevents a flash of the full static text before the effect begins.
+   Scoped to html.js-anim (set synchronously in <head>, before <body>
+   parses) so a no-JS visitor always sees the plain text immediately. */
+html.js-anim #heroTypeTarget { opacity: 0; }
+html.js-anim #heroTypeTarget.started { opacity: 1; }
+
+/* Typing cursor: only shown while the JS intro animation is running. */
+.type-cursor { display: none; }
+html.js-anim .type-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-left: 4px;
+  vertical-align: -0.05em;
+  background: var(--accent);
+  animation: cursorBlink 0.9s step-end infinite;
+}
+html.js-anim .type-cursor.done {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+@keyframes cursorBlink {
+  50% { opacity: 0; }
+}
+
+/* Hero reveal groups (eyebrow; role/lede/buttons/meta) start hidden only
+   when JS is running the intro sequence — with JS off, everything in
+   the hero is visible immediately, no animation, nothing missing. */
+html.js-anim .hero-reveal > * {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+html.js-anim .hero-reveal.is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-role {
   font-size: 1.15rem;
   color: var(--text-soft);
@@ -265,6 +305,15 @@ h1, h2, h3 {
    faint accent-toned glow behind it. */
 .hero-portrait {
   position: relative;
+}
+html.js-anim .hero-portrait {
+  opacity: 0;
+  transform: translateY(14px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+html.js-anim .hero-portrait.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 .hero-portrait::before {
   content: "";
@@ -507,8 +556,7 @@ h1, h2, h3 {
 .metric-label {
   font-size: 0.78rem;
   color: var(--text-faint);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   margin-top: 4px;
 }
 
