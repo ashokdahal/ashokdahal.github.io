@@ -1,0 +1,11 @@
+{
+  "name": "ashokdahal.github.io",
+  "private": true,
+  "description": "Academic homepage for Ashok Dahal, published via GitHub Pages.",
+  "scripts": {
+    "sync-scholar": "node scripts/fetch-scholar.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
