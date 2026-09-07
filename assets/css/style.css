@@ -1,6 +1,8 @@
 /* ---------------------------------------------------------------
    Ashok Dahal — academic homepage
-   Dark palette: charcoal ink / warm off-white text / clay accent.
+   Two palettes, toggled via [data-theme] on <html>:
+     dark (default): charcoal ink / warm off-white text / clay accent
+     light: warm paper / dark ink / clay accent
    No frameworks, no jargon.
 ----------------------------------------------------------------*/
 
@@ -8,7 +10,6 @@
   --bg: #141210;
   --bg-alt: #1b1814;
   --surface: #211d17;
-  --surface-hover: #2a251d;
   --text: #f2ece0;
   --text-soft: #c4bca9;
   --text-faint: #94897a;
@@ -16,7 +17,8 @@
   --accent: #dd7c4f;
   --accent-strong: #f2a276;
   --accent-tint-bg: rgba(221, 124, 79, 0.16);
-  --white: #ffffff;
+  --accent-glow: rgba(221, 124, 79, 0.22);
+  --header-bg: rgba(20, 18, 16, 0.88);
 
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -24,8 +26,28 @@
   --maxw: 1080px;
 }
 
+:root[data-theme="light"] {
+  --bg: #faf8f4;
+  --bg-alt: #f1ede4;
+  --surface: #ffffff;
+  --text: #1c1a17;
+  --text-soft: #4a463f;
+  --text-faint: #7a746a;
+  --border: #e2dcd0;
+  --accent: #a44a2f;
+  --accent-strong: #8a3c26;
+  --accent-tint-bg: #f4e6de;
+  --accent-glow: rgba(164, 74, 47, 0.14);
+  --header-bg: rgba(250, 248, 244, 0.92);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+
+body, .site-header, .card, .pill-list li, .pub-filter, .badge,
+.scholar-metrics, .timeline, .primary-nav, .btn, a {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
 
 body {
   margin: 0;
@@ -75,7 +97,7 @@ h1, h2, h3 {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(20, 18, 16, 0.88);
+  background: var(--header-bg);
   backdrop-filter: saturate(140%) blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -95,6 +117,12 @@ h1, h2, h3 {
 }
 .brand:hover { text-decoration: none; color: var(--accent); }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .primary-nav {
   display: flex;
   gap: 28px;
@@ -107,6 +135,26 @@ h1, h2, h3 {
 }
 .primary-nav a:hover { color: var(--accent); text-decoration: none; }
 
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle svg { width: 17px; height: 17px; }
+.theme-toggle .icon-moon { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -115,6 +163,7 @@ h1, h2, h3 {
   border: none;
   cursor: pointer;
   padding: 8px;
+  flex-shrink: 0;
 }
 .nav-toggle span {
   width: 22px;
@@ -221,7 +270,7 @@ h1, h2, h3 {
   content: "";
   position: absolute;
   inset: -14%;
-  background: radial-gradient(circle at 46% 42%, rgba(221, 124, 79, 0.22), transparent 68%);
+  background: radial-gradient(circle at 46% 42%, var(--accent-glow), transparent 68%);
   filter: blur(30px);
   z-index: -1;
 }
