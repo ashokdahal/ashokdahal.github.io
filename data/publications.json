@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/fetch-scholar.js",
-  "lastUpdated": "2026-09-07",
+  "lastUpdated": "2026-09-14",
   "publications": [
     {
       "id": "dahal2026-ai-disaster-riskmgmt",
@@ -28,7 +28,7 @@
       "venue": "Advances in Debris-flow Science and Practice, 383–432",
       "year": 2024,
       "type": "book-chapter",
-      "citations": 6
+      "citations": 7
     },
     {
       "id": "rani2026-transformer-rainfall",
@@ -73,7 +73,7 @@
       "venue": "Engineering Geology, 344, 107852",
       "year": 2025,
       "type": "journal-article",
-      "citations": 78
+      "citations": 80
     },
     {
       "id": "caleca2025-panEU-landslide-risk",
@@ -181,7 +181,7 @@
       "venue": "Geoscience Frontiers, 15(4), 101800",
       "year": 2024,
       "type": "journal-article",
-      "citations": 107
+      "citations": 108
     },
     {
       "id": "dahal2024-spacetime-ensemble-nn",
@@ -190,7 +190,7 @@
       "venue": "Natural Hazards and Earth System Sciences, 24(3), 823–845",
       "year": 2024,
       "type": "journal-article",
-      "citations": 57
+      "citations": 58
     },
     {
       "id": "wang2024-spacetime-risk-forecast",
@@ -226,7 +226,7 @@
       "venue": "Journal of Geophysical Research: Machine Learning and Computation, 1(3)",
       "year": 2024,
       "type": "journal-article",
-      "citations": 35
+      "citations": 36
     },
     {
       "id": "he2024-earthquake-legacy-insar",
@@ -253,7 +253,7 @@
       "venue": "Communications Earth & Environment, 5(1), 678",
       "year": 2024,
       "type": "journal-article",
-      "citations": 24
+      "citations": 25
     },
     {
       "id": "sang2024-three-gorges-deformation",
@@ -316,7 +316,7 @@
       "venue": "Environmental Modelling & Software, 170, 105833",
       "year": 2023,
       "type": "journal-article",
-      "citations": 37
+      "citations": 38
     },
     {
       "id": "dahal2023-ground-motion-simulations",
@@ -388,7 +388,7 @@
       "venue": "Engineering Geology, 108989, 2026",
       "year": 2026,
       "type": "journal-article",
-      "citations": null
+      "citations": 1
     },
     {
       "id": "geophysical-and-geo-2024",
