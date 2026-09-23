@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="From Foundations to Autonomy: Ashok Dahal's educational vision for UTQ Competence 5A at the University of Twente." />
+  <title>From Foundations to Autonomy — Educational Vision</title>
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="preconnect" href="https://basemaps.cartocdn.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#story">Skip to story</a>
+
+  <div id="map" aria-label="Interactive map following an educational journey from Nepal to the University of Twente"></div>
+  <div class="map-wash" aria-hidden="true"></div>
+  <div class="map-grid" aria-hidden="true"></div>
+
+  <header class="story-header">
+    <a class="brand" href="#start" aria-label="Back to start">
+      <span class="brand-dot">A</span>
+      <span><strong>Ashok Dahal</strong><small>Educational Vision · UTQ 5A</small></span>
+    </a>
+    <div class="header-actions">
+      <button class="text-button" id="referencesButton" type="button">References</button>
+      <div class="chapter-counter" aria-live="polite"><span id="currentChapter">01</span><i></i><span>08</span></div>
+    </div>
+  </header>
+
+  <aside class="map-legend" aria-label="Map legend">
+    <span><i class="legend-origin"></i> educational experience</span>
+    <span><i class="legend-route"></i> journey and synthesis</span>
+    <span><i class="legend-practice"></i> teaching practice</span>
+  </aside>
+
+  <div class="scroll-cue" aria-hidden="true"><span>scroll to travel</span><i></i></div>
+
+  <main id="story" class="story">
+    <section class="story-step hero-step is-active" id="start" data-step="0" data-view="world">
+      <article class="story-card hero-card">
+        <p class="kicker">UTQ Competence 5A · Vision on teaching and student learning</p>
+        <h1>From<br><em>Foundations</em><br>to Autonomy</h1>
+        <p class="lead">My educational vision developed through movement between two learning contexts. The journey did not lead me to choose one model over another. It led me to ask a more useful question: <strong>what kind of guidance helps a particular student learn at a particular moment?</strong></p>
+        <p class="context-note">This story reflects my own educational experiences. It is not intended as a general comparison of Nepalese and Dutch education.</p>
+        <a class="journey-link" href="#nepal">Begin the journey <span>↓</span></a>
+      </article>
+    </section>
+
+    <section class="story-step align-right" id="nepal" data-step="1" data-view="nepal">
+      <article class="story-card">
+        <p class="place-label"><span>01</span> Nepal · Foundations</p>
+        <h2>Structure gave me a strong starting point</h2>
+        <p>My earlier education was often organised around clear explanation, disciplinary theory and systematic progression. The teacher carried substantial responsibility for selecting, explaining and sequencing knowledge. This approach helped me build conceptual foundations and develop the discipline needed to master technically demanding subjects.</p>
+        <div class="map-note">
+          <strong>What I retain</strong>
+          <span>Clear explanation · conceptual foundations · high expectations · systematic progression</span>
+        </div>
+        <p class="tradeoff"><strong>What I later questioned:</strong> when explanation becomes the dominant mode, students can have fewer opportunities to make decisions, test ideas and learn how to act when the solution is uncertain.</p>
+      </article>
+    </section>
+
+    <section class="story-step" id="netherlands" data-step="2" data-view="netherlands">
+      <article class="story-card">
+        <p class="place-label"><span>02</span> The Netherlands · Application</p>
+        <h2>Learning became something to do</h2>
+        <p>My university experience in the Netherlands exposed me more strongly to discussion, independent preparation, project work and authentic problem solving. Students were expected not only to understand knowledge, but also to use it, question it and justify their choices.</p>
+        <div class="map-note">
+          <strong>What I retain</strong>
+          <span>Authentic application · dialogue · reflection · collaboration · student responsibility</span>
+        </div>
+        <p class="tradeoff"><strong>What I also observed:</strong> autonomy is productive only when students have enough prior knowledge, confidence and support to use it. A task that is challenging for one student may be inaccessible to another.</p>
+      </article>
+    </section>
+
+    <section class="story-step align-right vision-step" id="vision" data-step="3" data-view="utwide">
+      <article class="story-card wide-card">
+        <p class="place-label"><span>03</span> My educational vision</p>
+        <h2>Structure should enable autonomy</h2>
+        <div class="vision-prose">
+          <p>I see university teaching as the deliberate design of a progression from supported learning towards independent academic judgement. Students need clear disciplinary foundations before they can use knowledge confidently in unfamiliar situations. Direct explanation therefore has an important place in my teaching, particularly when concepts are new or technically difficult. However, explanation is not the endpoint. Its purpose is to prepare students to apply knowledge, compare alternatives, identify limitations and make increasingly independent decisions.</p>
+          <p>The amount of guidance should change with the learner and the task. Students enter my courses with different experience in programming, mathematics, geospatial analysis and machine learning. Providing identical support to everyone can therefore produce unequal opportunities to learn. I aim to diagnose what students already know, offer sufficient structure for productive participation, and then reduce that support as competence develops. Autonomy, in this view, is not the absence of teaching. It is an educational outcome that develops through well-timed scaffolding, practice and feedback.</p>
+          <p>This also changes how I understand my role as a teacher. I move between explaining, modelling, questioning, coaching and stepping back. I want students to leave a course not only knowing how a method works, but also able to decide when it is appropriate, defend their reasoning, recognise uncertainty and seek further knowledge when needed. Effective teaching therefore combines disciplinary rigour with active learning and reflection. The central criterion is not whether teaching is teacher-centred or student-centred, but whether each design decision helps students progress towards informed independence.</p>
+        </div>
+        <div class="vision-route" aria-label="Learning progression">
+          <span><b>1</b> Foundation<small>explain & model</small></span>
+          <i>→</i>
+          <span><b>2</b> Application<small>guide & coach</small></span>
+          <i>→</i>
+          <span><b>3</b> Reflection<small>question & compare</small></span>
+          <i>→</i>
+          <span><b>4</b> Autonomy<small>step back</small></span>
+        </div>
+      </article>
+    </section>
+
+    <section class="story-step theory-step" id="theory" data-step="4" data-view="ut">
+      <article class="story-card">
+        <p class="place-label"><span>04</span> Theoretical coordinates</p>
+        <h2>The ideas that orient my teaching</h2>
+        <p>My vision is informed by educational theory, but I use theory as a design lens rather than as a recipe.</p>
+        <div class="layer-list">
+          <button type="button" class="layer-item is-open" data-theory="alignment">
+            <span>Constructive alignment</span><small>Outcomes, activities and assessment should require the same forms of thinking.</small>
+          </button>
+          <button type="button" class="layer-item" data-theory="load">
+            <span>Cognitive load</span><small>New and complex tasks need structure, especially for novices.</small>
+          </button>
+          <button type="button" class="layer-item" data-theory="scaffold">
+            <span>Scaffolding</span><small>Support should enable performance and then fade as competence increases.</small>
+          </button>
+          <button type="button" class="layer-item" data-theory="active">
+            <span>Active learning</span><small>Students need to perform intellectual work, not only receive explanations.</small>
+          </button>
+        </div>
+        <p class="dialogue-note"><strong>Professional dialogue.</strong> UTQ sessions and conversations with colleagues made the timing of guidance more explicit in my thinking. I now treat guidance as a design variable: something to increase, reduce or change in response to prior knowledge and student progress.</p>
+      </article>
+    </section>
+
+    <section class="story-step align-right practice-step" id="practice" data-step="5" data-view="campus">
+      <article class="story-card wide-card">
+        <p class="place-label"><span>05</span> GeoAI teaching · Practice atlas</p>
+        <h2>My vision changes concrete teaching decisions</h2>
+        <p class="intro-copy">The map now moves to the University of Twente. The five markers are conceptual teaching stops rather than physical campus locations. Select a stop to see how structured autonomy influences my practice.</p>
+        <div class="practice-nav" role="tablist" aria-label="Teaching practice areas">
+          <button class="practice-button is-active" data-practice="design" type="button">Design</button>
+          <button class="practice-button" data-practice="teaching" type="button">Teaching</button>
+          <button class="practice-button" data-practice="supervision" type="button">Supervision</button>
+          <button class="practice-button" data-practice="assessment" type="button">Assessment</button>
+          <button class="practice-button" data-practice="evaluation" type="button">Evaluation</button>
+        </div>
+        <div class="practice-detail" id="practiceDetail" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section class="story-step" id="ut" data-step="6" data-view="campusclose">
+      <article class="story-card">
+        <p class="place-label"><span>06</span> University of Twente</p>
+        <h2>My vision connects with UT through responsive guidance</h2>
+        <p>UT emphasises learning by doing, inclusive learning communities and self-development. These principles fit my view that students should work with authentic problems and progressively take responsibility for their own learning.</p>
+        <div class="ut-compass">
+          <span><strong>Learning by doing</strong><small>work with data, code, models and uncertainty</small></span>
+          <span><strong>Inclusive communities</strong><small>create different pathways into shared learning goals</small></span>
+          <span><strong>Self-development</strong><small>develop reflection, judgement and responsibility</small></span>
+        </div>
+        <p>My additional emphasis is <strong>responsive guidance</strong>. Students cannot benefit equally from active or challenge-based learning if the required entry knowledge is assumed rather than established. I therefore see scaffolding as the bridge between inclusive participation and increasing autonomy.</p>
+      </article>
+    </section>
+
+    <section class="story-step align-right final-step" id="synthesis" data-step="7" data-view="worldfinal">
+      <article class="story-card final-card">
+        <p class="place-label"><span>07</span> Synthesis</p>
+        <h2>Not teacher-centred or student-centred.<br><em>Learning-centred.</em></h2>
+        <div class="synthesis-columns">
+          <div><strong>From structured education</strong><span>disciplinary foundations</span><span>clear explanation</span><span>systematic progression</span></div>
+          <div><strong>From student-active education</strong><span>authentic application</span><span>dialogue and reflection</span><span>student responsibility</span></div>
+        </div>
+        <blockquote>I aim to create a deliberate progression from structure to independence. My role is to provide enough support for productive learning, then deliberately reduce it as students become able to understand, apply, compare, justify and decide for themselves.</blockquote>
+        <div class="outcome-line"><span>Understand</span><i></i><span>Apply</span><i></i><span>Compare</span><i></i><span>Justify</span><i></i><span>Decide</span></div>
+        <p class="closing-note">The destination is not independence for its own sake. It is informed academic judgement.</p>
+      </article>
+    </section>
+  </main>
+
+  <button class="map-reset" id="mapReset" type="button" title="Return map to the current chapter" aria-label="Return map to current chapter">◎</button>
+
+  <dialog class="references-dialog" id="referencesDialog">
+    <form method="dialog" class="dialog-shell">
+      <div class="dialog-head"><div><p class="kicker">Educational basis</p><h2>References</h2></div><button value="close" aria-label="Close references">×</button></div>
+      <ol>
+        <li>Biggs, J. (1996). Enhancing teaching through constructive alignment. <em>Higher Education, 32</em>, 347–364. <a href="https://doi.org/10.1007/BF00138871" target="_blank" rel="noreferrer">DOI ↗</a></li>
+        <li>Freeman, S., et al. (2014). Active learning increases student performance in science, engineering, and mathematics. <em>PNAS, 111</em>(23), 8410–8415. <a href="https://doi.org/10.1073/pnas.1319030111" target="_blank" rel="noreferrer">DOI ↗</a></li>
+        <li>Sweller, J. (1988). Cognitive load during problem solving: Effects on learning. <em>Cognitive Science, 12</em>(2), 257–285. <a href="https://doi.org/10.1207/s15516709cog1202_4" target="_blank" rel="noreferrer">DOI ↗</a></li>
+        <li>Wood, D., Bruner, J. S., & Ross, G. (1976). The role of tutoring in problem solving. <em>Journal of Child Psychology and Psychiatry, 17</em>(2), 89–100. <a href="https://doi.org/10.1111/j.2044-8295.1976.tb02317.x" target="_blank" rel="noreferrer">DOI ↗</a></li>
+        <li>University of Twente. <em>Vision on Learning and Teaching</em>. <a href="https://www.utwente.nl/en/service-portal/organisation-regulations-and-codes-of-conduct/" target="_blank" rel="noreferrer">UT source ↗</a></li>
+        <li>University of Twente. <em>Twente Educational Model</em> and <em>Challenge-Based Learning</em>. <a href="https://www.utwente.nl/en/service-portal/educational-support/about-ut-education/twente-educational-model-tomtem" target="_blank" rel="noreferrer">TOM ↗</a> · <a href="https://www.utwente.nl/en/learning-teaching/themes/educational-design/challenge-based-learning/" target="_blank" rel="noreferrer">CBL ↗</a></li>
+      </ol>
+    </form>
+  </dialog>
+
+  <noscript><div class="noscript">This story uses JavaScript to animate the map. The written content remains in the page source, but enable JavaScript for the intended experience.</div></noscript>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+</body>
+</html>
