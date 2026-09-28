@@ -21,10 +21,20 @@
   <div class="map-grid" aria-hidden="true"></div>
 
   <header class="story-header">
-    <a class="brand" href="#start" aria-label="Back to start">
-      <span class="brand-dot">A</span>
-      <span><strong>Ashok Dahal</strong><small>Educational Vision · UTQ 5A</small></span>
-    </a>
+    <div class="identity-group">
+      <a class="brand" href="#start" aria-label="Back to start">
+        <span class="brand-dot">A</span>
+        <span class="brand-copy"><strong>Ashok Dahal</strong><small>Vision on Education</small></span>
+      </a>
+      <a class="itc-logo" href="https://www.utwente.nl/en/itc/" target="_blank" rel="noreferrer" aria-label="Faculty ITC, University of Twente">
+        <img src="img/itc_logo.png" alt="Faculty ITC, University of Twente" />
+      </a>
+    </div>
+    <nav class="part-nav" aria-label="Page sections">
+      <a href="#start" data-nav-part="a" aria-label="Teaching and learning" aria-current="location"><span class="nav-title-full">Teaching and learning</span><span class="nav-title-short">Vision</span></a>
+      <a href="#part-b" data-nav-part="b" aria-label="Working together as a team"><span class="nav-title-full">Working together as a team</span><span class="nav-title-short">Team</span></a>
+      <a href="#part-c" data-nav-part="c" aria-label="Reflection on my development and future plan"><span class="nav-title-full">Reflection on my development and future plan</span><span class="nav-title-short">Development</span></a>
+    </nav>
     <div class="header-actions">
       <button class="text-button" id="referencesButton" type="button">References</button>
       <div class="chapter-counter" aria-live="polite"><span id="currentChapter">01</span><i></i><span>08</span></div>
@@ -37,13 +47,13 @@
     <span><i class="legend-practice"></i> teaching practice</span>
   </aside>
 
-  <div class="scroll-cue" aria-hidden="true"><span>scroll to travel</span><i></i></div>
+  <div class="scroll-cue" aria-hidden="true"><span>scroll to explore</span><i></i></div>
 
   <main id="story" class="story">
     <section class="story-step hero-step is-active" id="start" data-step="0" data-view="world">
       <article class="story-card hero-card">
-        <p class="kicker">UTQ Competence 5A · Vision on teaching and student learning</p>
-        <h1>From<br><em>Foundations</em><br>to Autonomy</h1>
+        <p class="kicker">Ashok's Vision on </p>
+        <h1><em>Teaching and learning</em></h1>
         <p class="lead">My educational vision developed through movement between two learning contexts. The journey did not lead me to choose one model over another. It led me to ask a more useful question: <strong>what kind of guidance helps a particular student learn at a particular moment?</strong></p>
         <p class="context-note">This story reflects my own educational experiences. It is not intended as a general comparison of Nepalese and Dutch education.</p>
         <a class="journey-link" href="#nepal">Begin the journey <span>↓</span></a>
@@ -161,11 +171,160 @@
         <blockquote>I aim to create a deliberate progression from structure to independence. My role is to provide enough support for productive learning, then deliberately reduce it as students become able to understand, apply, compare, justify and decide for themselves.</blockquote>
         <div class="outcome-line"><span>Understand</span><i></i><span>Apply</span><i></i><span>Compare</span><i></i><span>Justify</span><i></i><span>Decide</span></div>
         <p class="closing-note">The destination is not independence for its own sake. It is informed academic judgement.</p>
+        <a class="part-jump" href="#part-b"><span>Continue</span><b>Working together as a team <i>↓</i></b></a>
       </article>
     </section>
   </main>
 
-  <button class="map-reset" id="mapReset" type="button" title="Return map to the current chapter" aria-label="Return map to current chapter">◎</button>
+  <section class="extension-part" id="part-b" data-part="b" aria-labelledby="part-b-title">
+    <div class="extension-shell">
+      <header class="part-heading">
+        <p class="kicker">Ashok's Teamwork</p>
+        <h1 id="part-b-title">Working together<br><em>as a team</em></h1>
+        <p class="part-deck">How I contribute to a teaching team, what colleagues value in my work, and where I want to become more consistent.</p>
+        <a class="part-index" href="#part-b-team">Teaching team <i>↓</i></a>
+      </header>
+
+      <div class="part-content">
+        <section class="reading-section" id="part-b-team" data-map-focus="campus">
+          <p class="section-index">01 / Roles in a teaching team</p>
+          <div class="reading-copy">
+            <h2>Depth is useful when students can enter it</h2>
+            <p>As an assistant professor, I divide my time among research, teaching and student supervision. These roles strengthen one another when I bring current questions in remote sensing, AI and natural hazards into the classroom. They also compete for time. Research problems often involve complex data and uncertain results, while students need a clear task that can be completed and discussed within a course. I therefore try to decide what students should learn before deciding how much of a research problem to include. My strength is bringing intellectual depth and relevant applications to teaching. My continuing challenge is to make that depth accessible without overloading students or the teaching schedule.</p>
+            <p>I teach in <em>Data Driven Hazard Modelling</em>, coordinated by Luigi Lombardo. My contribution draws on my research expertise and my experience developing applied GeoAI activities. For example, in a landslide susceptibility exercise, students train a random forest and a support vector machine, examine ROC–AUC curves and compare the resulting maps. The educational purpose extends beyond producing two models: students should be able to explain why the outputs differ and what the evaluation does, and does not, establish. To make such an activity work within a course, I need to agree with the coordinator and teaching team on its learning outcomes, prerequisites, timing and expected outputs. I also need to test the materials before students use them and communicate any changes early enough for colleagues to respond.</p>
+          </div>
+        </section>
+
+        <section class="reading-section">
+          <p class="section-index">02 / Shared practice</p>
+          <div class="reading-copy">
+            <h2>Take ownership, design for the whole course</h2>
+            <p>My approach to teamwork is to take responsibility for the content I develop while remaining open to how it fits the whole course. A technically strong exercise may still be unsuitable if it assumes skills students have not yet acquired or takes time needed for another learning outcome. I aim to share instructions and a working dataset in advance, invite a colleague to identify unclear steps and record recurring student questions after the session. If student assistants contribute to a practical, I would brief them on the learning goal and on which questions require a common answer from the teaching team. These steps help students receive coherent support while allowing colleagues and assistants to use their own expertise.</p>
+            <p>Collaboration is also central to my research. I work closely with Hakan Tanyas on research in our field. This relationship reminds me that professional work depends on discussing assumptions, testing ideas and being willing to revise an initial approach. I want to bring the same habits to teaching collaboration: explain the reasoning behind a proposed activity, invite criticism of the design and use colleagues’ expertise to improve it. At the same time, I recognise that being committed to the work can lead me to keep refining materials close to a deadline. I need to distinguish essential improvements from changes that can wait until the next course run.</p>
+          </div>
+        </section>
+
+        <section class="reading-section feedback-section" data-map-focus="campusclose">
+          <p class="section-index">03 / Colleague feedback</p>
+          <div class="reading-copy">
+            <h2>Commitment and intellectual contribution</h2>
+            <p>Feedback from two colleagues helps me assess how my professional contribution is experienced by others. Luigi Lombardo is an associate professor, Head of the Department of Geosciences, my line manager and the coordinator of <em>Data Driven Hazard Modelling</em>. His feedback to me has been positive about my dedication, hard work and intellectual capacity, as well as my approach to teaching and supervision. I take this as encouragement to continue bringing care and disciplinary expertise to my educational work. Because Luigi also sees how my teaching fits within a course and the department, his perspective is particularly relevant to how I manage responsibilities beyond an individual class.</p>
+            <p>Hakan Tanyas is an assistant professor in the Department of Geosciences and a close research colleague. He has likewise given me positive feedback on my dedication, hard work and intellectual contribution, and on my teaching and supervision styles. His perspective is valuable because sustained research collaboration gives him a view of how I discuss ideas, respond to challenges and work with others. These are qualities I also need when developing teaching materials or guiding students through an uncertain problem. The feedback described here is my summary of what Luigi and Hakan have told me, rather than a direct quotation from either colleague.</p>
+            <p>Both colleagues’ feedback identifies strengths, but positive feedback does not remove the need for critical reflection. My own development points concern the management of time and communication. I can invest substantial effort in making an exercise technically sound; I need to check equally carefully whether its scope, instructions and timing suit the students and the course team. Before the next course delivery, I will agree a date for sharing draft materials, ask a colleague to test the student instructions and identify which revisions must be made before teaching. After delivery, I will discuss with the team which difficulties students encountered and record changes for the next run. This will help me retain the dedication my colleagues value while making my contribution easier for others to review and build upon.</p>
+          </div>
+          <aside class="feedback-pullquote"><span>What I carry forward</span><strong>Keep the intellectual ambition. Make the planning, scope and communication easier for others to work with.</strong></aside>
+        </section>
+
+        <section class="reading-section">
+          <p class="section-index">04 / Working responsibly</p>
+          <div class="reading-copy">
+            <h2>Know where decisions belong</h2>
+            <p>Working responsibly within a university also requires knowing where decisions are made. I consult the course coordinator and programme director when a proposed change affects course workload, learning outcomes or the place of a course in the curriculum. The programme committee evaluates educational quality and advises on issues that extend beyond one course. The Examination Board safeguards assessment quality and has a formal role in matters governed by the Education and Examination Regulations. I therefore check the applicable regulations and procedures before changing an assessment arrangement or responding to a case that requires a formal decision. The Faculty Board has wider responsibility for educational policy and quality at faculty level. Knowing these roles helps me identify when I can adjust my own teaching, when I should consult colleagues and when a matter requires a decision through a formal route.</p>
+          </div>
+        </section>
+
+        <section class="part-closing">
+          <p class="section-index">A direction for my contribution</p>
+          <p>I want to develop as a teacher who contributes both expertise and reliability to a team. Luigi’s and Hakan’s feedback gives me confidence in the commitment, intellectual contribution and student support I bring to my work. My next step is to make the planning and communication around that work more consistent. Students benefit when the quality of an individual teacher’s contribution is matched by coherent decisions across the course.</p>
+          <a class="part-jump" href="#part-c"><span>Continue</span><b>Reflection on my development and future plan <i>↓</i></b></a>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="extension-part extension-part-alt" id="part-c" data-part="c" aria-labelledby="part-c-title">
+    <div class="extension-shell">
+      <header class="part-heading">
+        <p class="kicker">Ashok's development</p>
+        <h1 id="part-c-title">Reflection and future plan <br><em>for development</em></h1>
+        <p class="part-deck">What the UTQ has changed in my practice, and how I will keep learning from students, colleagues and evidence.</p>
+        <a class="part-index" href="#part-c-learning">Learning through the UTQ <i>↓</i></a>
+      </header>
+
+      <div class="part-content">
+        <section class="reading-section" id="part-c-learning" data-map-focus="campus">
+          <p class="section-index">01 / A changed lens</p>
+          <div class="reading-copy">
+            <h2>Good intentions need evidence of learning</h2>
+            <p>The UTQ has changed how I examine my teaching. I previously focused strongly on whether the subject matter was relevant and whether students could engage with a real problem. I still value those aims, but I now pay closer attention to the steps between a learning outcome and a student’s ability to demonstrate it. A useful exercise needs clear prerequisites, suitable teaching activities, transparent assessment and enough information about students’ learning to support changes during the course. My central lesson is that good intentions do not establish that students have learned what I intended.</p>
+            <p>In course design, my strength is selecting authentic problems from remote sensing, AI and natural hazards. Such problems show students why methods matter beyond a textbook example. The risk is that an authentic task can contain too many unfamiliar steps at once. Work on constructive alignment has made me ask what students should be able to explain or do by the end of a course, and whether each activity prepares them for that outcome. My development point is to test the workload and required prior knowledge more systematically. Before the next delivery, I will map each practical and its assessment criteria to the relevant learning outcomes, then ask a colleague to work through the instructions.</p>
+          </div>
+        </section>
+
+        <section class="reading-section">
+          <p class="section-index">02 / Teaching in the moment</p>
+          <div class="reading-copy">
+            <h2>Check understanding before students go solo</h2>
+            <p>The practical teaching component of the UTQ has made me more attentive to what happens during a session. I am comfortable explaining technical concepts and demonstrating a workflow. I need to check understanding more often before asking students to continue independently. A demonstration may appear clear to me because I already know the method. Short questions, a small task or a request to interpret an intermediate result would give me better evidence of what students understand. I will build these checks into the next set of practical sessions and use the responses to decide when to explain again, offer a worked start or move on.</p>
+          </div>
+        </section>
+
+        <section class="reading-section">
+          <p class="section-index">03 / Supervision</p>
+          <div class="reading-copy">
+            <h2>Make autonomy explicit and supported</h2>
+            <p>In supervision, I value giving students room to develop their own ideas and make research decisions. I also recognise that autonomy requires clear expectations. A student who is new to a method may need help defining a feasible question and identifying the next decision, while a more experienced student may benefit from having to justify a choice independently. I want to agree milestones and feedback arrangements early, provide specific comments on both the work and the reasoning behind it, and gradually reduce guidance as competence develops. I will review whether students understand what they should do after each meeting, rather than assuming that my feedback was clear.</p>
+          </div>
+        </section>
+
+        <section class="reading-section">
+          <p class="section-index">04 / Assessment</p>
+          <div class="reading-copy">
+            <h2>Reward reasoning, not only a finished map</h2>
+            <p>The assessment component has sharpened my distinction between completing a technical workflow and showing academic understanding. In GeoAI, a student may generate a model and a map without being able to explain their validity or limitations. I therefore want assessment to recognise interpretation, comparison and justified decisions as well as correct outputs. My development point is transparency: students should know in advance what counts as a strong explanation, and colleagues should be able to apply the criteria consistently. For the next assessment, I will review the criteria with a colleague, discuss a sample of graded work and revise any criterion that produces inconsistent judgements.</p>
+          </div>
+        </section>
+
+        <section class="reading-section">
+          <p class="section-index">05 / Evaluation</p>
+          <div class="reading-copy">
+            <h2>Gather evidence while there is time to respond</h2>
+            <p>Evaluation has taught me to gather information early enough to act on it. My planned first-day diagnostic will examine students’ starting points in programming, remote sensing, natural hazards and data-driven modelling. I will combine brief self-report questions with a small task, since confidence alone may not show what a student can do. I will use the results to adjust the pace, examples and level of support while keeping the learning outcomes common to all students. A midpoint check will then ask whether the difficulty and support are appropriate. At the end of the course, I will compare these responses with students’ work and identify changes for the next run.</p>
+          </div>
+        </section>
+
+        <section class="reading-section vision-reflection">
+          <p class="section-index">06 / My educational vision</p>
+          <div class="reading-copy">
+            <h2>From clear foundations to informed independence</h2>
+            <p>These lessons also shape my educational vision and my role within a teaching team. I aim to move students from clear foundations towards informed independence, but I cannot design that progression from my perspective alone. Students’ work, observations during teaching and discussion with colleagues must inform it. My strength is connecting disciplinary expertise to meaningful applications. My main development goals are to make the route into those applications more accessible, explain assessment expectations more clearly and communicate teaching changes earlier to colleagues.</p>
+          </div>
+        </section>
+
+        <section class="action-plan" data-map-focus="ut">
+          <p class="section-index">07 / 2026–27 commitments</p>
+          <h2>Three checkpoints, one learning cycle</h2>
+          <div class="action-grid">
+            <article><span>Before the next course</span><p>I will review the alignment of outcomes, activities and assessment, test one practical with a colleague and prepare the first-day diagnostic. This requires time for a course-team discussion and a small, reliable dataset.</p></article>
+            <article><span>During the course</span><p>I will use the diagnostic, short checks of understanding and a midpoint question about pace and support. I will record which adjustments I made and why.</p></article>
+            <article><span>Within two weeks after assessment</span><p>I will discuss a sample of grading decisions with a colleague, review student work and evaluation responses, and identify two changes for the following run.</p></article>
+          </div>
+        </section>
+
+        <section class="part-closing final-reflection">
+          <p class="section-index">Continuing beyond the UTQ</p>
+          <p>I will keep a short teaching log to make this a continuing practice. For each course run, I will record what students could do independently, where they needed support, what their assessed work showed and what colleagues noticed. In the following run, I will check whether the changes improved students’ ability to understand, apply and justify their decisions. This cycle gives me a practical way to keep developing as a teacher after the UTQ is complete.</p>
+          <a class="part-jump" href="#start"><span>Return to beginning</span><b>Teaching and learning <i>↑</i></b></a>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="world-finale" id="world-finale" aria-labelledby="world-finale-title">
+    <div class="world-finale-card">
+      <p class="kicker">The journey in perspective</p>
+      <h2 id="world-finale-title">From Nepal<br><em>to Twente</em></h2>
+      <p>My educational experience connects structured foundations with an increasingly independent approach to learning. The route remains open: each course, collaboration and student encounter adds another perspective.</p>
+      <a href="#start">Return to the beginning <span>↑</span></a>
+    </div>
+  </section>
+
+  <!-- <button class="map-reset" id="mapReset" type="button" title="Return map to the current chapter" aria-label="Return map to current chapter">◎</button> -->
+
+  <footer class="site-footer">
+    <span>Ashok's Vision on Education</span>
+    <span>© 2026 Ashok Dahal</span>
+  </footer>
 
   <dialog class="references-dialog" id="referencesDialog">
     <form method="dialog" class="dialog-shell">

@@ -1,4 +1,193 @@
 (() => {
+  const partSections = [...document.querySelectorAll('.extension-part')];
+  const partLinks = [...document.querySelectorAll('[data-nav-part]')];
+
+  const atlasTopics = {
+    b: [
+      'Teaching roles',
+      'Course teamwork',
+      'Colleague feedback',
+      'University decisions'
+    ],
+    c: [
+      'Course design',
+      'Teaching practice',
+      'Student supervision',
+      'Assessment',
+      'Evaluation',
+      'Educational vision',
+      '2026–27 plan',
+      'Next course cycle'
+    ]
+  };
+
+  function buildTopicAtlas(part){
+    const section = document.getElementById(`part-${part}`);
+    const content = section?.querySelector('.part-content');
+    const sources = content ? [...content.children].filter(child =>
+      child.matches('.reading-section, .action-plan, .final-reflection')
+    ) : [];
+    const titles = atlasTopics[part];
+    if(!content || sources.length!==titles.length) return;
+
+    const atlas = document.createElement('div');
+    atlas.className = `topic-atlas topic-atlas-${part}`;
+    atlas.id = part==='b' ? 'part-b-team' : 'part-c-learning';
+    atlas.dataset.mapFocus = part==='b' ? 'campusclose' : 'campus';
+
+    const diagram = document.createElement('div');
+    diagram.className = 'atlas-diagram';
+    diagram.setAttribute('aria-label', part==='b' ? 'Teaching-team branches converging at the University of Twente' : 'Circular teaching reflection and improvement plan');
+
+    const connectors = document.createElementNS('http://www.w3.org/2000/svg','svg');
+    connectors.classList.add('atlas-connectors');
+    connectors.setAttribute('viewBox','0 0 100 100');
+    connectors.setAttribute('preserveAspectRatio','none');
+    connectors.setAttribute('aria-hidden','true');
+    connectors.innerHTML = part==='b'
+      ? '<path d="M15 18 L50 50 M85 18 L50 50 M15 82 L50 50 M85 82 L50 50 M50 50 L92 50" />'
+      : '<circle cx="50" cy="50" r="39" /><path d="M50 11 L50 50 M78 22 L50 50 M89 50 L50 50 M78 78 L50 50 M50 89 L50 50 M22 78 L50 50 M11 50 L50 50 M22 22 L50 50" />';
+    diagram.append(connectors);
+
+    const hub = document.createElement('div');
+    hub.className = 'atlas-hub';
+    hub.innerHTML = '<span>UT</span><small>University of Twente</small>';
+    diagram.append(hub);
+
+    const tabs = document.createElement('div');
+    tabs.className = 'atlas-nodes';
+    tabs.setAttribute('role','tablist');
+    tabs.setAttribute('aria-label',part==='b' ? 'Working together as a team topics' : 'Reflection on my development and future plan');
+
+    const details = document.createElement('div');
+    details.className = 'atlas-details';
+
+    sources.forEach((source,index)=>{
+      const button = document.createElement('button');
+      button.className = 'atlas-node';
+      button.type = 'button';
+      button.id = `part-${part}-tab-${index+1}`;
+      button.setAttribute('role','tab');
+      button.setAttribute('aria-controls',`part-${part}-panel-${index+1}`);
+      button.setAttribute('aria-selected',index===0 ? 'true' : 'false');
+      button.tabIndex = index===0 ? 0 : -1;
+      button.innerHTML = `<span class="atlas-node-number">${String(index+1).padStart(2,'0')}</span><span class="atlas-node-title"></span>`;
+      button.querySelector('.atlas-node-title').textContent = titles[index];
+      tabs.append(button);
+
+      const panel = document.createElement('article');
+      panel.className = 'atlas-detail';
+      panel.id = `part-${part}-panel-${index+1}`;
+      panel.setAttribute('role','tabpanel');
+      panel.setAttribute('aria-labelledby',button.id);
+      panel.dataset.topicIndex = String(index);
+
+      if(source.matches('.reading-section')){
+        const copy = source.querySelector('.reading-copy');
+        const quote = source.querySelector('.feedback-pullquote');
+        if(copy) panel.append(copy);
+        if(quote) panel.append(quote);
+      }else if(source.matches('.action-plan')){
+        source.querySelectorAll('h2,.action-grid').forEach(element=>panel.append(element));
+      }else{
+        [...source.children].filter(element=>!element.matches('.section-index')).forEach(element=>panel.append(element));
+      }
+      details.append(panel);
+      source.remove();
+    });
+
+    if(part==='b'){
+      const closing = [...content.children].find(child=>child.matches('.part-closing')&&!child.matches('.final-reflection'));
+      const feedbackPanel = details.querySelector('#part-b-panel-3');
+      const closingCopy = closing?.querySelector(':scope > p:not(.section-index)');
+      const nextPartLink = closing?.querySelector('.part-jump');
+      if(closing&&feedbackPanel&&closingCopy&&nextPartLink){
+        const highlight = document.createElement('aside');
+        highlight.className = 'atlas-highlight';
+        const label = document.createElement('span');
+        label.textContent = 'My next step';
+        highlight.append(label,closingCopy,nextPartLink);
+        feedbackPanel.append(highlight);
+        closing.remove();
+      }
+    }
+
+    function activateTab(index,moveFocus=false,scrollToPanel=false){
+      const buttons = [...tabs.querySelectorAll('[role="tab"]')];
+      const panels = [...details.querySelectorAll('[role="tabpanel"]')];
+      buttons.forEach((button,buttonIndex)=>{
+        const active = buttonIndex===index;
+        button.setAttribute('aria-selected',String(active));
+        button.tabIndex = active ? 0 : -1;
+      });
+      if(moveFocus) buttons[index].focus();
+      if(scrollToPanel) panels[index].scrollIntoView({behavior:'smooth',block:'center'});
+    }
+
+    tabs.addEventListener('click',event=>{
+      const button = event.target.closest('[role="tab"]');
+      if(button) activateTab([...tabs.children].indexOf(button),false,true);
+    });
+    tabs.addEventListener('keydown',event=>{
+      const buttons = [...tabs.querySelectorAll('[role="tab"]')];
+      const currentIndex = buttons.indexOf(document.activeElement);
+      let nextIndex = currentIndex;
+      if(event.key==='ArrowRight'||event.key==='ArrowDown') nextIndex = (currentIndex+1)%buttons.length;
+      else if(event.key==='ArrowLeft'||event.key==='ArrowUp') nextIndex = (currentIndex-1+buttons.length)%buttons.length;
+      else if(event.key==='Home') nextIndex = 0;
+      else if(event.key==='End') nextIndex = buttons.length-1;
+      else return;
+      event.preventDefault();
+      activateTab(nextIndex,true,true);
+    });
+
+    let topicScrollPending = false;
+    function updateActiveTopic(){
+      const panels = [...details.querySelectorAll('[role="tabpanel"]')];
+      const focusLine = window.innerHeight * .45;
+      const activeIndex = panels.findIndex(panel=>{
+        const bounds = panel.getBoundingClientRect();
+        return bounds.top<=focusLine && bounds.bottom>=focusLine;
+      });
+      if(activeIndex>=0) activateTab(activeIndex);
+    }
+    window.addEventListener('scroll',()=>{
+      if(topicScrollPending) return;
+      topicScrollPending = true;
+      requestAnimationFrame(()=>{
+        topicScrollPending = false;
+        updateActiveTopic();
+      });
+    },{passive:true});
+    const topicObserver = new IntersectionObserver(updateActiveTopic,{threshold:[0,.15,.4]});
+    [...details.querySelectorAll('[role="tabpanel"]')].forEach(panel=>topicObserver.observe(panel));
+
+    diagram.append(tabs);
+    atlas.append(diagram,details);
+    content.prepend(atlas);
+  }
+
+  buildTopicAtlas('b');
+  buildTopicAtlas('c');
+
+  function updatePartNavigation(){
+    const focusY = window.scrollY + window.innerHeight * .35;
+    let currentPart = 'a';
+    partSections.forEach(section=>{
+      if(section.getBoundingClientRect().top + window.scrollY <= focusY) currentPart = section.dataset.part;
+    });
+    document.body.dataset.readingPart = currentPart;
+    partLinks.forEach(link=>{
+      if(link.dataset.navPart===currentPart) link.setAttribute('aria-current','location');
+      else link.removeAttribute('aria-current');
+    });
+  }
+
+  window.addEventListener('scroll',updatePartNavigation,{passive:true});
+  const partObserver = new IntersectionObserver(updatePartNavigation,{threshold:0});
+  partSections.forEach(section=>partObserver.observe(section));
+  updatePartNavigation();
+
   if (!window.L) return;
 
   const views = {
@@ -22,6 +211,58 @@
     attributionControl:true
   }).setView(views.world.center, views.world.zoom);
 
+  const mapFocusSections = [...document.querySelectorAll('[data-map-focus]')];
+  const worldFinale = document.getElementById('world-finale');
+  let activeMapContext = null;
+
+  function updateMapContext(){
+    const finaleBounds = worldFinale.getBoundingClientRect();
+    if(finaleBounds.top < window.innerHeight * .7 && finaleBounds.bottom > window.innerHeight * .3){
+      if(activeMapContext!=='world'){
+        activeMapContext = 'world';
+        document.body.dataset.mapContext = 'world';
+        setPracticeVisible(false);
+        route?.setStyle({opacity:1,weight:3.5});
+        routeShadow?.setStyle({opacity:.82,weight:8});
+        nepalMarker?.setOpacity(1);
+        utMarker?.setOpacity(1);
+        map.flyTo(views.worldfinal.center,views.worldfinal.zoom,{duration:1.4,easeLinearity:.22});
+      }
+      return;
+    }
+
+    const focusLine = window.innerHeight * .54;
+    const focusedSection = mapFocusSections.find(section=>{
+      const bounds = section.getBoundingClientRect();
+      return bounds.top <= focusLine && bounds.bottom >= focusLine;
+    });
+
+    if(!focusedSection){
+      if(activeMapContext){
+        activeMapContext = null;
+        delete document.body.dataset.mapContext;
+      }
+      return;
+    }
+
+    const context = focusedSection.dataset.mapFocus;
+    if(activeMapContext===context) return;
+    activeMapContext = context;
+    document.body.dataset.mapContext = context;
+    route.setStyle({opacity:.28,weight:2.5});
+    routeShadow.setStyle({opacity:.2,weight:6});
+    nepalMarker.setOpacity(.35);
+    utMarker.setOpacity(1);
+    setPracticeVisible(false);
+    const view = views[context];
+    if(view) map.flyTo(view.center,view.zoom,{duration:view.duration,easeLinearity:.22});
+  }
+
+  window.addEventListener('scroll',updateMapContext,{passive:true});
+  const mapContextObserver = new IntersectionObserver(updateMapContext,{threshold:[0,.25,.5]});
+  mapFocusSections.forEach(section=>mapContextObserver.observe(section));
+  mapContextObserver.observe(worldFinale);
+
   L.tileLayer('https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_3v84_1_481d62720dff5cdc8eac2002', {
     subdomains:'sabcd',
     maxZoom:20,
@@ -43,7 +284,7 @@
     [28.2,84.0],[29.8,76.0],[31.0,67.0],[33.2,58.0],[36.0,48.0],[39.5,38.0],[43.5,28.0],[47.0,18.0],[50.0,10.0],[52.239,6.856]
   ];
   const routeShadow = L.polyline(journeyCoords,{pane:'routePane',color:'#ffffff',weight:7,opacity:.72,lineCap:'round'}).addTo(map);
-  const route = L.polyline(journeyCoords,{pane:'routePane',color:'#496953',weight:3.2,opacity:.95,dashArray:'8 9',lineCap:'round'}).addTo(map);
+  const route = L.polyline(journeyCoords,{pane:'routePane',color:'#05928d',weight:3.2,opacity:.95,dashArray:'8 9',lineCap:'round'}).addTo(map);
 
   const practiceData = {
     design:{
@@ -101,7 +342,7 @@
     practiceMarkers[key] = L.marker(coords,{icon,pane:'practicePane',interactive:true}).on('click',()=>activatePractice(key));
   });
 
-  const learningPath = L.polyline(Object.values(practiceCoords),{pane:'routePane',color:'#79704d',weight:2,opacity:.7,dashArray:'4 8'});
+  const learningPath = L.polyline(Object.values(practiceCoords),{pane:'routePane',color:'#21488d',weight:2,opacity:.7,dashArray:'4 8'});
   const practiceGroup = L.layerGroup([...Object.values(practiceMarkers), learningPath]);
 
   const detail = document.getElementById('practiceDetail');
@@ -146,7 +387,7 @@
     routeShadow.setStyle({opacity:(n===0||n===7)?.82:.28,weight:(n===0||n===7)?8:6});
     nepalMarker.setOpacity(n===1||n===0||n===7?1:.42);
     utMarker.setOpacity(n>=2?1:.42);
-    setPracticeVisible(n===5);
+    setPracticeVisible(n===5 && document.body.dataset.readingPart==='a' && !document.body.dataset.mapContext);
   }
 
   function goToStep(step, immediate=false){
