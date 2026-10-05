@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/fetch-scholar.js",
-  "lastUpdated": "2026-09-14",
+  "lastUpdated": "2026-10-05",
   "publications": [
     {
       "id": "dahal2026-ai-disaster-riskmgmt",
@@ -37,7 +37,7 @@
       "venue": "Geoscience Frontiers, 102295",
       "year": 2026,
       "type": "journal-article",
-      "citations": 3
+      "citations": 4
     },
     {
       "id": "uruena2026-inventory-loss-damage",
@@ -73,7 +73,7 @@
       "venue": "Engineering Geology, 344, 107852",
       "year": 2025,
       "type": "journal-article",
-      "citations": 80
+      "citations": 83
     },
     {
       "id": "caleca2025-panEU-landslide-risk",
@@ -82,7 +82,7 @@
       "venue": "Reviews of Geophysics, 63(1), e2023RG000825",
       "year": 2025,
       "type": "journal-article",
-      "citations": 38
+      "citations": 41
     },
     {
       "id": "wang2025-long-short-term-spacetime",
@@ -91,7 +91,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 142",
       "year": 2025,
       "type": "journal-article",
-      "citations": 15
+      "citations": 16
     },
     {
       "id": "belvederesi2025-graph-transformers",
@@ -181,7 +181,7 @@
       "venue": "Geoscience Frontiers, 15(4), 101800",
       "year": 2024,
       "type": "journal-article",
-      "citations": 108
+      "citations": 114
     },
     {
       "id": "dahal2024-spacetime-ensemble-nn",
@@ -190,7 +190,7 @@
       "venue": "Natural Hazards and Earth System Sciences, 24(3), 823–845",
       "year": 2024,
       "type": "journal-article",
-      "citations": 58
+      "citations": 61
     },
     {
       "id": "wang2024-spacetime-risk-forecast",
@@ -199,7 +199,7 @@
       "venue": "Geoscience Frontiers, 15(2), 101765",
       "year": 2024,
       "type": "journal-article",
-      "citations": 43
+      "citations": 46
     },
     {
       "id": "dahal2024-seismic-waveform-transformer",
@@ -208,7 +208,7 @@
       "venue": "Communications Earth & Environment, 5(1), 75",
       "year": 2024,
       "type": "journal-article",
-      "citations": 44
+      "citations": 45
     },
     {
       "id": "cisneros2024-deep-graphical-wildfires",
@@ -217,7 +217,7 @@
       "venue": "Spatial Statistics, 59, 100811",
       "year": 2024,
       "type": "journal-article",
-      "citations": 40
+      "citations": 41
     },
     {
       "id": "dahal2024-deeplearning-extremes",
@@ -226,7 +226,7 @@
       "venue": "Journal of Geophysical Research: Machine Learning and Computation, 1(3)",
       "year": 2024,
       "type": "journal-article",
-      "citations": 36
+      "citations": 37
     },
     {
       "id": "he2024-earthquake-legacy-insar",
@@ -244,7 +244,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 132",
       "year": 2024,
       "type": "journal-article",
-      "citations": 28
+      "citations": 31
     },
     {
       "id": "dahal2024-gorkha-topographic-amplification",
@@ -253,7 +253,7 @@
       "venue": "Communications Earth & Environment, 5(1), 678",
       "year": 2024,
       "type": "journal-article",
-      "citations": 25
+      "citations": 27
     },
     {
       "id": "sang2024-three-gorges-deformation",
@@ -262,7 +262,7 @@
       "venue": "Engineering Geology, 337, 107584",
       "year": 2024,
       "type": "journal-article",
-      "citations": 11
+      "citations": 12
     },
     {
       "id": "spatola2024-egu-pockmarks",
@@ -298,7 +298,7 @@
       "venue": "Computers & Geosciences, 176, 105364",
       "year": 2023,
       "type": "journal-article",
-      "citations": 148
+      "citations": 150
     },
     {
       "id": "ahmed2023-dynamic-rainfall-forecasting",
@@ -307,7 +307,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 125",
       "year": 2023,
       "type": "journal-article",
-      "citations": 49
+      "citations": 52
     },
     {
       "id": "fang2023-speech-recognition-ews",
@@ -316,7 +316,7 @@
       "venue": "Environmental Modelling & Software, 170, 105833",
       "year": 2023,
       "type": "journal-article",
-      "citations": 38
+      "citations": 39
     },
     {
       "id": "dahal2023-ground-motion-simulations",
@@ -325,7 +325,7 @@
       "venue": "Geomorphology, 441, 108898",
       "year": 2023,
       "type": "journal-article",
-      "citations": 38
+      "citations": 41
     },
     {
       "id": "elia2023-cryospheric-multihazard",
