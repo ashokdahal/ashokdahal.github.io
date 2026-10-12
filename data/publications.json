@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/fetch-scholar.js",
-  "lastUpdated": "2026-10-05",
+  "lastUpdated": "2026-10-12",
   "publications": [
     {
       "id": "dahal2026-ai-disaster-riskmgmt",
@@ -73,7 +73,7 @@
       "venue": "Engineering Geology, 344, 107852",
       "year": 2025,
       "type": "journal-article",
-      "citations": 83
+      "citations": 85
     },
     {
       "id": "caleca2025-panEU-landslide-risk",
@@ -82,7 +82,7 @@
       "venue": "Reviews of Geophysics, 63(1), e2023RG000825",
       "year": 2025,
       "type": "journal-article",
-      "citations": 41
+      "citations": 44
     },
     {
       "id": "wang2025-long-short-term-spacetime",
@@ -181,7 +181,7 @@
       "venue": "Geoscience Frontiers, 15(4), 101800",
       "year": 2024,
       "type": "journal-article",
-      "citations": 114
+      "citations": 117
     },
     {
       "id": "dahal2024-spacetime-ensemble-nn",
@@ -217,7 +217,7 @@
       "venue": "Spatial Statistics, 59, 100811",
       "year": 2024,
       "type": "journal-article",
-      "citations": 41
+      "citations": 42
     },
     {
       "id": "dahal2024-deeplearning-extremes",
@@ -244,7 +244,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 132",
       "year": 2024,
       "type": "journal-article",
-      "citations": 31
+      "citations": 32
     },
     {
       "id": "dahal2024-gorkha-topographic-amplification",
@@ -298,7 +298,7 @@
       "venue": "Computers & Geosciences, 176, 105364",
       "year": 2023,
       "type": "journal-article",
-      "citations": 150
+      "citations": 154
     },
     {
       "id": "ahmed2023-dynamic-rainfall-forecasting",
@@ -307,7 +307,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 125",
       "year": 2023,
       "type": "journal-article",
-      "citations": 52
+      "citations": 54
     },
     {
       "id": "fang2023-speech-recognition-ews",
@@ -316,7 +316,7 @@
       "venue": "Environmental Modelling & Software, 170, 105833",
       "year": 2023,
       "type": "journal-article",
-      "citations": 39
+      "citations": 40
     },
     {
       "id": "dahal2023-ground-motion-simulations",
