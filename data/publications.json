@@ -1,6 +1,6 @@
 {
   "generatedBy": "scripts/fetch-scholar.js",
-  "lastUpdated": "2026-10-12",
+  "lastUpdated": "2026-11-02",
   "publications": [
     {
       "id": "dahal2026-ai-disaster-riskmgmt",
@@ -37,7 +37,7 @@
       "venue": "Geoscience Frontiers, 102295",
       "year": 2026,
       "type": "journal-article",
-      "citations": 4
+      "citations": 5
     },
     {
       "id": "uruena2026-inventory-loss-damage",
@@ -64,7 +64,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 149",
       "year": 2026,
       "type": "journal-article",
-      "citations": null
+      "citations": 1
     },
     {
       "id": "dahal2025-physicsinformed-landslide",
@@ -73,7 +73,7 @@
       "venue": "Engineering Geology, 344, 107852",
       "year": 2025,
       "type": "journal-article",
-      "citations": 85
+      "citations": 90
     },
     {
       "id": "caleca2025-panEU-landslide-risk",
@@ -82,7 +82,7 @@
       "venue": "Reviews of Geophysics, 63(1), e2023RG000825",
       "year": 2025,
       "type": "journal-article",
-      "citations": 44
+      "citations": 45
     },
     {
       "id": "wang2025-long-short-term-spacetime",
@@ -91,7 +91,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 142",
       "year": 2025,
       "type": "journal-article",
-      "citations": 16
+      "citations": 18
     },
     {
       "id": "belvederesi2025-graph-transformers",
@@ -100,7 +100,7 @@
       "venue": "Environmental Modelling & Software, 183, 106231",
       "year": 2025,
       "type": "journal-article",
-      "citations": 9
+      "citations": 10
     },
     {
       "id": "he2025-insar-hillslope-velocities",
@@ -109,7 +109,7 @@
       "venue": "Bulletin of Engineering Geology and the Environment, 84(3), 131",
       "year": 2025,
       "type": "journal-article",
-      "citations": 10
+      "citations": 11
     },
     {
       "id": "spatola2025-pockmark-susceptibility",
@@ -118,7 +118,7 @@
       "venue": "Marine and Petroleum Geology, 176, 107337",
       "year": 2025,
       "type": "journal-article",
-      "citations": 7
+      "citations": 9
     },
     {
       "id": "dahal2025-earthquakes-wake-slopes",
@@ -163,7 +163,7 @@
       "venue": "EarthArXiv",
       "year": 2026,
       "type": "preprint",
-      "citations": null
+      "citations": 1
     },
     {
       "id": "dahal2026-mountain-resonance",
@@ -181,7 +181,7 @@
       "venue": "Geoscience Frontiers, 15(4), 101800",
       "year": 2024,
       "type": "journal-article",
-      "citations": 117
+      "citations": 120
     },
     {
       "id": "dahal2024-spacetime-ensemble-nn",
@@ -190,7 +190,7 @@
       "venue": "Natural Hazards and Earth System Sciences, 24(3), 823–845",
       "year": 2024,
       "type": "journal-article",
-      "citations": 61
+      "citations": 62
     },
     {
       "id": "wang2024-spacetime-risk-forecast",
@@ -199,7 +199,7 @@
       "venue": "Geoscience Frontiers, 15(2), 101765",
       "year": 2024,
       "type": "journal-article",
-      "citations": 46
+      "citations": 47
     },
     {
       "id": "dahal2024-seismic-waveform-transformer",
@@ -208,7 +208,7 @@
       "venue": "Communications Earth & Environment, 5(1), 75",
       "year": 2024,
       "type": "journal-article",
-      "citations": 45
+      "citations": 48
     },
     {
       "id": "cisneros2024-deep-graphical-wildfires",
@@ -226,7 +226,7 @@
       "venue": "Journal of Geophysical Research: Machine Learning and Computation, 1(3)",
       "year": 2024,
       "type": "journal-article",
-      "citations": 37
+      "citations": 38
     },
     {
       "id": "he2024-earthquake-legacy-insar",
@@ -235,7 +235,7 @@
       "venue": "Earth Surface Processes and Landforms, 49(3), 980–990",
       "year": 2024,
       "type": "journal-article",
-      "citations": 29
+      "citations": 30
     },
     {
       "id": "lim2024-ensemble-nn-spacetime",
@@ -244,7 +244,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 132",
       "year": 2024,
       "type": "journal-article",
-      "citations": 32
+      "citations": 34
     },
     {
       "id": "dahal2024-gorkha-topographic-amplification",
@@ -253,7 +253,7 @@
       "venue": "Communications Earth & Environment, 5(1), 678",
       "year": 2024,
       "type": "journal-article",
-      "citations": 27
+      "citations": 29
     },
     {
       "id": "sang2024-three-gorges-deformation",
@@ -262,7 +262,7 @@
       "venue": "Engineering Geology, 337, 107584",
       "year": 2024,
       "type": "journal-article",
-      "citations": 12
+      "citations": 13
     },
     {
       "id": "spatola2024-egu-pockmarks",
@@ -298,7 +298,7 @@
       "venue": "Computers & Geosciences, 176, 105364",
       "year": 2023,
       "type": "journal-article",
-      "citations": 154
+      "citations": 156
     },
     {
       "id": "ahmed2023-dynamic-rainfall-forecasting",
@@ -307,7 +307,7 @@
       "venue": "International Journal of Applied Earth Observation and Geoinformation, 125",
       "year": 2023,
       "type": "journal-article",
-      "citations": 54
+      "citations": 57
     },
     {
       "id": "fang2023-speech-recognition-ews",
@@ -316,7 +316,7 @@
       "venue": "Environmental Modelling & Software, 170, 105833",
       "year": 2023,
       "type": "journal-article",
-      "citations": 40
+      "citations": 41
     },
     {
       "id": "dahal2023-ground-motion-simulations",
@@ -325,7 +325,7 @@
       "venue": "Geomorphology, 441, 108898",
       "year": 2023,
       "type": "journal-article",
-      "citations": 41
+      "citations": 42
     },
     {
       "id": "elia2023-cryospheric-multihazard",
@@ -343,7 +343,7 @@
       "venue": "Spatial Information Research",
       "year": 2022,
       "type": "journal-article",
-      "citations": 28
+      "citations": 29
     },
     {
       "id": "high-resolution-mapping-2023",
@@ -460,6 +460,15 @@
       "venue": "39th Asian Conference on Remote Sensing: Remote Sensing Enabling Prosperity …, 2018",
       "year": 2018,
       "type": "conference",
+      "citations": null
+    },
+    {
+      "id": "tracking-slow-moving-2026",
+      "title": "Tracking slow‐moving landslide responses to the 2023 Kahramanmaraş earthquake with InSAR",
+      "authors": "A Dahal, H Tanyaş, AL Handwerger, L Lombardo, EJ Fielding",
+      "venue": "Journal of Geophysical Research: Earth Surface 131 (10), e2026JF009117, 2026",
+      "year": 2026,
+      "type": "journal-article",
       "citations": null
     }
   ]
